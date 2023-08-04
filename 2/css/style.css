@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+li{list-style: none;}
+.active{color: #318F3A;cursor: default;text-decoration: underline;}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 20px 40px;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+header nav a{
+    margin: auto 20px auto 40px;
+    color: #000000;
+    text-decoration: none; 
+    transition: .2s;
+}
+
+header nav a:hover, header nav a button:hover{
+    color: #318F3A;
+    text-decoration: underline;
+}
+
+header nav a button{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+dialog{
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0.5em;
+    border-radius: 0.5em;
+    width: auto;
+    font-weight: bold;
+    position: absolute;
+}
+
+dialog p{
+    padding-left: 1em;
+    margin-bottom: -0.1em;
+}
+
+dialog button{
+    margin-left: 1em;
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    color: rgb(158, 37, 37);
+}
+
+#barra{
+    width: 30em;
+    border-radius: 5em;
+    border-color: #000000;
+    position: relative;
+    left: 23%;
+    margin-left: 10em;
+}
+
+.p-3 img{
+    float: left;
+    margin-bottom: 5em;
+    padding-right: 1em;
+}
+
+.p-3{
+    text-align: start;
+}
+
+div a{
+    text-decoration: none;
+    color: #000000;
+}
+
+p.p-5{
+    font-weight: bold;
+}
+
+header.cad {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+main.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+div.cad {
+    background-color: #318F3A;
+    width: 90vh;
+    height: 90vh;
+    border-radius: 50%;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+div.ola {
+    color: white;
+    text-align: center;
+}
+div.ola h2 {
+    font-weight: 900;
+}
+
+main.cadastro form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+main.cadastro input { 
+    border: none;
+    color: white;
+}
+main.cadastro input::placeholder {
+    color: white;
+}
+
+main.cadastro input:focus {
+    outline: none;
+}
+
+main.cadastro .inputgroup input {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px 5px 40px;
+    width: 100%;
+}
+main.cadastro .inputgroup {
+    position: relative;
+}
+
+main.cadastro .inputgroup img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4E1C66;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+main.cadastro p {
+    color: white;
+    font-size: .9rem;
+}
+
+main.cadastro a {
+    font-weight: bold;
+    color: white;
+}
+
+main.reserva{
+    text-align: center;
+    padding-top: 10em;
+}
+
+main.reserva h1{
+    font-weight: 900;
+    color: #318F3A;
+}
+
+main.reserva h3{
+    font-weight: bold;
+}
