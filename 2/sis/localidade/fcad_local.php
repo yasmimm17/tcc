@@ -45,11 +45,6 @@
                     <img src="img/local.png">
                 </div>
 
-                <div class="inputgroup">
-                    <input type="text" maxlength="1" name="adm" id="adm" placeholder="Adm">
-                    <img src="img/local.png">
-                </div>
-
                 <input type="submit" value="Cadastrar">
                     
                 <p>Já tem uma conta? <a href="login.php">Entrar</a></p>

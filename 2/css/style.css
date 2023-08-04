@@ -214,3 +214,23 @@ main.reserva h1{
 main.reserva h3{
     font-weight: bold;
 }
+
+#user{
+    height: 10em;
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info{
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info input{
+    border: none;
+}
+
+.info button{
+    margin-top: 2em;
+    border-radius: 5em;
+}

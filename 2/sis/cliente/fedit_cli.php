@@ -49,11 +49,6 @@
             <img src="img/local.png">
         </div>
 
-        <div class="inputgroup">
-            <input type="text" name="adm" id="adm" placeholder="Adm" value='<?php echo $info['adm']?>'>
-            <img src="img/local.png">
-        </div>
-
         <input type="submit" value="Atualizar">
     </form>
 

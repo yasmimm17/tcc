@@ -3,12 +3,11 @@
      $email = $_POST["email"];
      $senha = $_POST["senha"];
      $cep = $_POST["cep"];
-     $adm = $_POST["adm"];
 
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
      $sql = "insert into cliente values ";
-     $sql .= "(0, '$nome', '$email', sha1('$senha'), '$cep', $adm, 1)"; 
+     $sql .= "(0, '$nome', '$email', sha1('$senha'), '$cep')"; 
 
      $result = mysqli_query($con, $sql);
 
