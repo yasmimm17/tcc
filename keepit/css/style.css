@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+
 li{list-style: none;}
 .active{color: #318F3A;cursor: default;text-decoration: underline;}
 
@@ -64,8 +65,8 @@ dialog{
     position: absolute;
 }
 
-dialog p{
-    padding-left: 1em;
+dialog a{
+    padding-left: -3em;
     margin-bottom: -0.1em;
 }
 
@@ -213,4 +214,29 @@ main.reserva h1{
 
 main.reserva h3{
     font-weight: bold;
+}
+
+#user{
+    height: 10em;
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info{
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info input{
+    border: none;
+}
+
+.info button{
+    margin-top: 2em;
+    border-radius: 3em;
+    border: none;
+    padding: 0.5em;
+    background-color: rgb(148, 148, 148);
+    font-weight: bold;
+    width: 10em;
 }

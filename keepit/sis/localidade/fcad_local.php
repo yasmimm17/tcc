@@ -24,30 +24,33 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_cli.php" method="post">
+            <form action="insere_local.php" method="post">
                 <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" maxlength="10" name="cep" id="cep" placeholder="cep">
                     <img src="img/nome.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="email" maxlength="30" name="email" id="email" placeholder="Email">
+                    <input type="text" maxlength="60" name="logradouro" id="logradouro" placeholder="logradouro">
                     <img src="img/email.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha">
+                    <input type="text" maxlength="60" name="bairro" id="bairro" placeholder="bairro">
                     <img src="img/senha.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="text" name="cep" id="cep" placeholder="Cep">
+                    <input type="text" maxlength="60" name="cidade" id="cidade" placeholder="cidade">
+                    <img src="img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="text" maxlength="2" name="uf" id="uf" placeholder="uf">
                     <img src="img/local.png">
                 </div>
 
                 <input type="submit" value="Cadastrar">
-                    
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
             </form>
             
         </div>

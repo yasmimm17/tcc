@@ -1,9 +1,9 @@
 <?php
-    $id_cli (int) $_GET["id_cli"];
+    $cep (int) $_GET["cep"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 
-    $sql = "select * from cliente where id_cli = $id_cli;";
+    $sql = "select * from localidade where cep = $cep;";
 
     $result = mysqli_query($con, $sql) or die (mysqli_error($con));
 
@@ -16,7 +16,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>ediçaõ de cliente</title>
+     <title>ediçaõ de localidade</title>
 
      <!-- css -->
     <link rel="stylesheet" href="css/style.css">
@@ -24,28 +24,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-    <form action="atualiza_cli.php" method="post">
+    <form action="atualiza_local.php" method="post">
         <div class="inputgroup">
-            <input type="hidden" name="id_cli" value='<?php echo $info['id_cli']?>'>
+            <input type="hidden" name="cep" value='<?php echo $info['cep']?>'>
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome" value='<?php echo $info['nome']?>'>
+            <input type="text" maxlength="10" name="cep" id="cep" placeholder="cep" value='<?php echo $info['cep']?>'>
             <img src="img/nome.png">
         </div>
 
         <div class="inputgroup">
-            <input type="email" maxlength="30" name="email" id="email" placeholder="Email" value='<?php echo $info['email']?>'>
+            <input type="text" maxlength="60" name="logradouro" id="logradouro" placeholder="logradouro" value='<?php echo $info['logradouro']?>'>
             <img src="img/email.png">
         </div>
 
         <div class="inputgroup">
-            <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha" value='<?php echo $info['senha']?>'>
+            <input type="text" maxlength="60" name="bairro" id="bairro" placeholder="bairro" value='<?php echo $info['bairro']?>'>
             <img src="img/senha.png">
         </div>
 
         <div class="inputgroup">
-            <input type="text" name="cep" id="cep" placeholder="Cep" value='<?php echo $info['cep']?>'>
+            <input type="text" maxlength="60" name="cidade" id="cidade" placeholder="cidade" value='<?php echo $info['cidade']?>'>
+            <img src="img/local.png">
+        </div>
+
+        <div class="inputgroup">
+            <input type="text" maxlength="2" name="uf" id="uf" placeholder="uf" value='<?php echo $info['uf']?>'>
             <img src="img/local.png">
         </div>
 

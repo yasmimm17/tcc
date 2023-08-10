@@ -27,7 +27,7 @@
             <form action="insere_cli.php" method="post">
                 <div class="inputgroup">
                     <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
-                    <img src="../../img/nome.png">
+                    <img src="img/nome.png">
                 </div>
 
                 <div class="inputgroup">
