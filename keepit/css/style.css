@@ -7,7 +7,7 @@
 }
 
 li{list-style: none;}
-.active{color: #318F3A;cursor: default;text-decoration: underline;}
+.active{color: #005A09;cursor: default;text-decoration: underline;}
 
 body{
     font-family: 'Nunito', sans-serif;
@@ -45,7 +45,7 @@ header nav a{
 }
 
 header nav a:hover, header nav a button:hover{
-    color: #318F3A;
+    color: #005A09;
     text-decoration: underline;
 }
 
@@ -124,7 +124,7 @@ main.cadastro {
 }
 
 div.cad {
-    background-color: #318F3A;
+    background-color: #005A09;
     width: 90vh;
     height: 90vh;
     border-radius: 50%;
@@ -209,7 +209,7 @@ main.reserva{
 
 main.reserva h1{
     font-weight: 900;
-    color: #318F3A;
+    color: #005A09;
 }
 
 main.reserva h3{
@@ -239,4 +239,22 @@ main.reserva h3{
     background-color: rgb(148, 148, 148);
     font-weight: bold;
     width: 10em;
+}
+
+#apres{
+    text-align: center;
+}
+
+#apres h1{
+    color: #005A09;
+}
+
+#apres button{
+    padding: 0.5em;
+    background-color: #005A09;
+    color: white;
+    border: none;
+    border-radius: 5em;
+    width: 8em;
+    font-weight: 900;
 }

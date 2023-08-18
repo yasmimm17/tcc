@@ -1,5 +1,5 @@
 <?php
-    $id_cli (int) $_GET["id_cli"];
+    $id_cli = (int) $_GET["id_cli"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 

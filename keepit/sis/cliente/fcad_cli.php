@@ -45,6 +45,11 @@
                     <img src="../../img/local.png">
                 </div>
 
+                <div class="inputgroup">
+                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
+                    <img src="../../img/local.png">
+                </div>
+
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
                     
                 <p>Já tem uma conta? <a href="login.php">Entrar</a></p>

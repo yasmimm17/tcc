@@ -1,5 +1,5 @@
 <?php
-    $cep (int) $_GET["cep"];
+    $cep = (int) $_GET["cep"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 

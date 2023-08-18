@@ -15,8 +15,8 @@
           <td>".$info['cidade']."</td>
           <td>".$info['uf']."</td>
           <td>".$info['ativo']."</td>
-          <td><a href = 'fedit_local.php?id=". $info[0]."'>Editar</a></td>
-          <td><a href = 'excluir_local.php?id=". $info[0]."'>Excluir</a></td></tr>
+          <td><a href = 'fedit_local.php?cep=". $info[0]."'>Editar</a></td>
+          <td><a href = 'excluir_local.php?cep=". $info[0]."'>Excluir</a></td></tr>
           ";
      }
 ?>

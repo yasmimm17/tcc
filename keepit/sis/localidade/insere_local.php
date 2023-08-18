@@ -8,7 +8,7 @@
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
      $sql = "insert into localidade values ";
-     $sql .= "(0, '$cep', '$logradouro', $bairro, '$cidade', '$uf')"; 
+     $sql .= "('$cep', '$logradouro', '$bairro', '$cidade', '$uf')"; 
 
      $result = mysqli_query($con, $sql);
 
