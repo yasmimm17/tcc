@@ -24,20 +24,40 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_cli.php" method="post">
+            <form action="insere_res.php" method="post">
                 <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" maxlength="60" name="nome_res" id="nome_res" placeholder="Nome">
                     <img src="img/nome.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="email" maxlength="30" name="email" id="email" placeholder="Email">
+                    <input type="number" maxlength="30" name="nr_res" id="nr_res" placeholder="Número">
                     <img src="../../img/email.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha">
+                    <input type="text" maxlength="60" name="comp_res" id="comp_res" placeholder="Complemento">
                     <img src="../../img/senha.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="text" name="tipo_sede_res" id="tipo_sede_res" placeholder="Sede">
+                    <img src="../../img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                    <img src="../../img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                    <img src="../../img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="number" name="nivel" id="nivel" placeholder="Nível">
+                    <img src="../../img/local.png">
                 </div>
 
                 <div class="inputgroup">
@@ -46,7 +66,7 @@
                 </div>
 
                 <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
+                    <input type="number" name="id_marca" id="id_marca" placeholder="ID da Marca">
                     <img src="../../img/local.png">
                 </div>
 

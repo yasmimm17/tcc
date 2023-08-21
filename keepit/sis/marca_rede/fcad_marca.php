@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="inputgroup">
-                    <input type="image" name="logo_marca" id="logo_marca" placeholder="Logo">
+                    <input type="text" name="logo_marca" id="logo_marca" placeholder="Logo">
                     <img src="../../img/email.png">
                 </div>
 

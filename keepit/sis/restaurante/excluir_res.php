@@ -1,15 +1,15 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $id_cli = (int) $_GET["id_cli"];
+     $id_res = (int) $_GET["id_res"];
 
-     $sql = "delete from cliente where id_cli = $id_cli;";
+     $sql = "delete from restaurante where id_res = $id_res;";
 
      $result = mysqli_query($con, $sql);
      
      if($result){
-          echo "Cliente excluído com sucesso.<br><hr>";
-          include "lista_cli.php";
+          echo "Restaurante excluído com sucesso.<br><hr>";
+          include "lista_res.php";
      }else{
           echo "ERRO";
      }

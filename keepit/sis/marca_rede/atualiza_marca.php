@@ -1,19 +1,17 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $id_cli = $_POST["id_cli"];
-     $nome = $_POST["nome"];
-     $email = $_POST["email"];
-     $senha = $_POST["senha"];
-     $cep = $_POST["cep"];
+     $id_marca = $_POST["id_marca"];
+     $nome_marca = $_POST["nome_marca"];
+     $logo_marca = $_POST["logo_marca"];
 
-     $sql = "update cliente set nome='$nome', email='$email', senha='$senha', cep='$cep' where id_cli = $id_cli;";
+     $sql = "update marca_rede set nome_marca='$nome_marca', logo_marca='$logo_marca' where id_marca = $id_marca;";
 
      $result = mysqli_query($con, $sql);
 
      if($result){
-          echo "Cliente atualizado com sucesso.<br><hr>";
-          include "lista_cli.php";
+          echo "Marca atualizada com sucesso.<br><hr>";
+          include "lista_marca.php";
      }else{
           echo "ERRO";
      }
