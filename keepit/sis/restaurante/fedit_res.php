@@ -69,6 +69,11 @@
             <img src="img/local.png">
         </div>
 
+        <div class="inputgroup">
+            <input type="number" name="id_marca" id="id_marca" placeholder="ID da Marca" value='<?php echo $info['id_marca']?>'>
+            <img src="img/local.png">
+        </div>
+
         <input type="submit" value="Atualizar">
     </form>
 

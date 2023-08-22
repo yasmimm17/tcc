@@ -1,22 +1,19 @@
 <?php
-     $nome = $_POST["nome"];
-     $email = $_POST["email"];
-     $senha = $_POST["senha"];
-     $cep = $_POST["cep"];
-     $nivel = $_POST["nivel"];
+     $nome_estilo_mesa = $_POST["nome_estilo_mesa"];
+     $lugares_mesa = $_POST["lugares_mesa"];
 
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $sql = "insert into cliente values ";
-     $sql .= "(0, '$nome', '$email', sha1('$senha'), '$cep', '$nivel')"; 
+     $sql = "insert into tipo_mesa values ";
+     $sql .= "(0, '$nome_estilo_mesa', '$lugares_mesa')"; 
 
      //echo $sql; exit;
 
      $result = mysqli_query($con, $sql);
 
      if($result){
-          echo "Cliente incluído com sucesso.<br><hr>";
-          include "lista_cli.php";
+          echo "Tipo de mesa incluído com sucesso.<br><hr>";
+          include "lista_mesa.php";
      }else{
           echo "ERRO";
      }

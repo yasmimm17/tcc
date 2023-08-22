@@ -1,9 +1,9 @@
 <?php
-    $id_cli = (int) $_GET["id_cli"];
+    $id_mesa = (int) $_GET["id_mesa"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 
-    $sql = "select * from cliente where id_cli = $id_cli;";
+    $sql = "select * from tipo_mesa where id_mesa = $id_mesa;";
 
     $result = mysqli_query($con, $sql) or die (mysqli_error($con));
 
@@ -26,27 +26,17 @@
 <body>
     <form action="atualiza_cli.php" method="post">
         <div class="inputgroup">
-            <input type="hidden" name="id_cli" value='<?php echo $info['id_cli']?>'>
+            <input type="hidden" name="id_mesa" value='<?php echo $info['id_mesa']?>'>
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome" value='<?php echo $info['nome']?>'>
+            <input type="text" maxlength="60" name="nome_estilo_mesa" id="nome_estilo_mesa" placeholder="Nome" value='<?php echo $info['nome_estilo_mesa']?>'>
             <img src="img/nome.png">
         </div>
 
         <div class="inputgroup">
-            <input type="email" maxlength="30" name="email" id="email" placeholder="Email" value='<?php echo $info['email']?>'>
+            <input type="number" name="lugares_mesa" id="lugares_mesa" placeholder="Lugares" value='<?php echo $info['lugares_mesa']?>'>
             <img src="img/email.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha" value='<?php echo $info['senha']?>'>
-            <img src="img/senha.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="text" name="cep" id="cep" placeholder="Cep" value='<?php echo $info['cep']?>'>
-            <img src="img/local.png">
         </div>
 
         <input type="submit" value="Atualizar">

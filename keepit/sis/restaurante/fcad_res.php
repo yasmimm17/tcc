@@ -71,8 +71,6 @@
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
-                    
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
             </form>
             
         </div>

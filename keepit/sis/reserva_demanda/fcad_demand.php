@@ -24,35 +24,35 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_cli.php" method="post">
-                <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
-                    <img src="img/nome.png">
-                </div>
+            <form action="insere_demand.php" method="post">
 
                 <div class="inputgroup">
-                    <input type="email" maxlength="30" name="email" id="email" placeholder="Email">
+                    <input type="number" name="qtde_pessoas" id="qtde_pessoas" placeholder="Quantidade de pessoas">
                     <img src="../../img/email.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha">
-                    <img src="../../img/senha.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="cep" id="cep" placeholder="Cep">
+                    <input type="text" name="cel_contato" id="cel_contato" placeholder="Celular">
                     <img src="../../img/local.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
+                    <input type="number" name="sit_reserva_ond" id="sit_reserva_ond" placeholder="Situação da reserva">
+                    <img src="../../img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="number" name="id_res" id="id_res" placeholder="ID do restaurante">
+                    <img src="../../img/local.png">
+                </div>
+
+                <div class="inputgroup">
+                    <input type="number" name="id_cli" id="id_cli" placeholder="ID do cliente">
                     <img src="../../img/local.png">
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
                     
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
             </form>
             
         </div>

@@ -1,9 +1,9 @@
 <?php
-    $id_cli = (int) $_GET["id_cli"];
+    $id_invent = (int) $_GET["id_invent"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 
-    $sql = "select * from cliente where id_cli = $id_cli;";
+    $sql = "select * from inventario where id_invent = $id_invent;";
 
     $result = mysqli_query($con, $sql) or die (mysqli_error($con));
 
@@ -24,29 +24,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-    <form action="atualiza_cli.php" method="post">
+    <form action="atualiza_invent.php" method="post">
         <div class="inputgroup">
-            <input type="hidden" name="id_cli" value='<?php echo $info['id_cli']?>'>
+            <input type="hidden" name="id_invent" value='<?php echo $info['id_invent']?>'>
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome" value='<?php echo $info['nome']?>'>
+            <input type="number" name="qtde" id="qtde" placeholder="Quantidade" value='<?php echo $info['qtde']?>'>
             <img src="img/nome.png">
         </div>
 
         <div class="inputgroup">
-            <input type="email" maxlength="30" name="email" id="email" placeholder="Email" value='<?php echo $info['email']?>'>
+            <input type="number" name="id_mesa" id="id_mesa" placeholder="ID da mesa" value='<?php echo $info['id_mesa']?>'>
             <img src="img/email.png">
         </div>
 
         <div class="inputgroup">
-            <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha" value='<?php echo $info['senha']?>'>
+            <input type="number" name="id_res" id="id_res" placeholder="ID do restaurante" value='<?php echo $info['id_res']?>'>
             <img src="img/senha.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="text" name="cep" id="cep" placeholder="Cep" value='<?php echo $info['cep']?>'>
-            <img src="img/local.png">
         </div>
 
         <input type="submit" value="Atualizar">

@@ -1,9 +1,9 @@
 <?php
-    $id_cli = (int) $_GET["id_cli"];
+    $id_reserva = (int) $_GET["id_reserva"];
 
     $con = mysqli_connect("localhost", "root", "", "keepit");
 
-    $sql = "select * from cliente where id_cli = $id_cli;";
+    $sql = "select * from reserva_fixa where id_reserva = $id_reserva;";
 
     $result = mysqli_query($con, $sql) or die (mysqli_error($con));
 
@@ -24,28 +24,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-    <form action="atualiza_cli.php" method="post">
+    <form action="atualiza_fixa.php" method="post">
         <div class="inputgroup">
-            <input type="hidden" name="id_cli" value='<?php echo $info['id_cli']?>'>
+            <input type="hidden" name="id_reserva" value='<?php echo $info['id_reserva']?>'>
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome" value='<?php echo $info['nome']?>'>
+            <input type="time" name="horario" id="horario" placeholder="Horário" value='<?php echo $info['horario']?>'>
             <img src="img/nome.png">
         </div>
 
         <div class="inputgroup">
-            <input type="email" maxlength="30" name="email" id="email" placeholder="Email" value='<?php echo $info['email']?>'>
+            <input type="number" name="qtde_pessoas" id="qtde_pessoas" placeholder="Quantidade de pessoas" value='<?php echo $info['qtde_pessoas']?>'>
             <img src="img/email.png">
         </div>
 
         <div class="inputgroup">
-            <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha" value='<?php echo $info['senha']?>'>
+            <input type="text" maxlength="60" name="obs" id="obs" placeholder="Observação" value='<?php echo $info['obs']?>'>
             <img src="img/senha.png">
         </div>
 
         <div class="inputgroup">
-            <input type="text" name="cep" id="cep" placeholder="Cep" value='<?php echo $info['cep']?>'>
+            <input type="text" name="cel_contato" id="cel_contato" placeholder="Celular" value='<?php echo $info['cel_contato']?>'>
+            <img src="img/local.png">
+        </div>
+
+        <div class="inputgroup">
+            <input type="text" name="situacao_reserva" id="situacao_reserva" placeholder="Situação da reserva" value='<?php echo $info['situacao_reserva']?>'>
+            <img src="img/local.png">
+        </div>
+
+        <div class="inputgroup">
+            <input type="text" name="id_res" id="id_res" placeholder="ID do restaurante" value='<?php echo $info['id_res']?>'>
+            <img src="img/local.png">
+        </div>
+
+        <div class="inputgroup">
+            <input type="text" name="id_cli" id="id_cli" placeholder="ID do cliente" value='<?php echo $info['id_cli']?>'>
             <img src="img/local.png">
         </div>
 

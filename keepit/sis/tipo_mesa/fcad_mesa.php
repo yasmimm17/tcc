@@ -24,35 +24,18 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_cli.php" method="post">
+            <form action="insere_mesa.php" method="post">
                 <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" maxlength="60" name="nome_estilo_mesa" id="nome_estilo_mesa" placeholder="Nome">
                     <img src="img/nome.png">
                 </div>
 
                 <div class="inputgroup">
-                    <input type="email" maxlength="30" name="email" id="email" placeholder="Email">
+                    <input type="number" name="lugares_mesa" id="lugares_mesa" placeholder="Lugares">
                     <img src="../../img/email.png">
                 </div>
 
-                <div class="inputgroup">
-                    <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha">
-                    <img src="../../img/senha.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="cep" id="cep" placeholder="Cep">
-                    <img src="../../img/local.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
-                    <img src="../../img/local.png">
-                </div>
-
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
-                    
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
             </form>
             
         </div>

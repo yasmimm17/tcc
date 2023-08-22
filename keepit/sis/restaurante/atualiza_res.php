@@ -10,8 +10,9 @@
      $senha = $_POST["senha"];
      $nivel = $_POST["nivel"];
      $cep = $_POST["cep"];
+     $id_marca = $_POST["id_marca"];
 
-     $sql = "update restaurante set nome_res='$nome_res', nr_res='$nr_res', comp_res='$comp_res', tipo_sede_res='$tipo_sede_res', usuario='$usuario', senha='$senha', nivel='$nivel', cep='$cep' where id_res = $id_res;";
+     $sql = "update restaurante set nome_res='$nome_res', nr_res='$nr_res', comp_res='$comp_res', tipo_sede_res='$tipo_sede_res', usuario='$usuario', senha='$senha', nivel='$nivel', cep='$cep', id_marca='$id_marca' where id_res = $id_res;";
 
      $result = mysqli_query($con, $sql);
 

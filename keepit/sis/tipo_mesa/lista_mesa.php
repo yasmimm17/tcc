@@ -1,23 +1,20 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $sql = "select * from cliente;";
+     $sql = "select * from tipo_mesa;";
 
      $result = mysqli_query($con, $sql);
 
      echo "<table border='1'>
-     <th>ID</th> <th>NOME</th> <th>EMAIL</th> <th>SENHA</th> <th>CEP</th> <th>NÍVEL</th> <th>ATIVO</th> <th colspan='2'>AÇÕES</th>";
+     <th>ID</th> <th>NOME</th> <th>Lugares</th> <th>ATIVO</th> <th colspan='2'>AÇÕES</th>";
      while($info = mysqli_fetch_array($result)){
           echo "<tr>
-          <td>".$info['id_cli']."</td>
-          <td>".$info['nome']."</td>
-          <td>".$info['email']."</td>
-          <td>".$info['senha']."</td>
-          <td>".$info['cep']."</td>
-          <td>".$info['nivel']."</td>
+          <td>".$info['id_mesa']."</td>
+          <td>".$info['nome_estilo_mesa']."</td>
+          <td>".$info['lugares_mesa']."</td>
           <td>".$info['ativo']."</td>
-          <td><a href = 'fedit_cli.php?id_cli=". $info[0]."'>Editar</a></td>
-          <td><a href = 'excluir_cli.php?id_cli=". $info[0]."'>Excluir</a></td></tr>
+          <td><a href = 'fedit_mesa.php?id_mesa=". $info[0]."'>Editar</a></td>
+          <td><a href = 'excluir_mesa.php?id_mesa=". $info[0]."'>Excluir</a></td></tr>
           ";
      }
 ?>

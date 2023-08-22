@@ -7,11 +7,12 @@
      $senha = $_POST["senha"];
      $nivel = $_POST["nivel"];
      $cep = $_POST["cep"];
+     $id_marca = $_POST["id_marca"];
 
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
      $sql = "insert into restaurante values ";
-     $sql .= "(0, '$nome_res', '$nr_res', comp_res, '$tipo_sede_res', '$usuario', '$senha', '$nivel', '$cep' )"; 
+     $sql .= "(0, '$nome_res', '$nr_res', '$comp_res', '$tipo_sede_res', '$usuario', '$senha', '$nivel', '$cep', '$id_marca')"; 
 
      //echo $sql; exit;
 

@@ -1,15 +1,15 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $id_cli = (int) $_GET["id_cli"];
+     $id_mesa = (int) $_GET["id_mesa"];
 
-     $sql = "delete from cliente where id_cli = $id_cli;";
+     $sql = "delete from inventario where id_mesa = $id_mesa;";
 
      $result = mysqli_query($con, $sql);
      
      if($result){
-          echo "Cliente excluído com sucesso.<br><hr>";
-          include "lista_cli.php";
+          echo "Inventário excluído com sucesso.<br><hr>";
+          include "lista_invent.php";
      }else{
           echo "ERRO";
      }
