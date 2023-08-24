@@ -1,64 +1,65 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keep It</title>
+<div> <?php include "mensagens.php"; ?> </div>
+<div id="main" class="container-fluid">
+	<h3 class="page-header">Cadastrar Cliente</h3>
+	<form action="?page=insere_cli" method="post">
+		
+		<div id="linha01" class="row"> 
+			<div class="form-group col-md-1">
+				<label for="id_cli">ID</label>
+				<input type="text" disabled="disabled" value="0" class="form-control" name="id_cli">
+			</div>
+			
+			<div class="form-group col-md-5">
+				<label for="nome">Nome do Cliente</label>
+				<input type="text" class="form-control" name="nome">
+			</div>
+			
+			<div class="form-group col-md-3">
+				<label for="email">E-mail</label>
+				<input type="email" class="form-control" name="email">
+			</div>
+			
+			<div class="form-group col-md-3">
+				<label for="senha">Senha</label>
+				<input type="password" class="form-control" name="senha">
+			</div>
+			
+		</div>
+	
+		<div id="linha02" class="row"> 
+		
+			<div class="form-group col-md-4">
+				<label for="cep">Cep</label>
+				<input type="text" class="form-control" name="cep">
+			</div>
 
-    <!--bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- css  -->
-    <link rel="stylesheet" href="../../css/style.css">
-</head>
-<body>
-    <header class="cad">
-        <nav>
-            <img src="img/Keep It.png" alt="">
-        </nav>
-    </header>
-    <main class="cadastro">
-        <div class="cad">
-            <div class="ola">
-                <h2>Olá!</h2>
-                <h5>Esperamos por você!</h5>
-            </div>
+			<div class="form-group col-md-2">
+				<label for="nivel">Nível</label>
+				<select class="form-control" name="nivel" id="nivel">
+					<option value="1" >Adm Geral</option>
+					<option value="2">Adm Restaurante</option>
+					<option value="3">Cliente</option>		
+				</select>
+			</div>
 
-            <form action="insere_cli.php" method="post">
-                <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
-                    <img src="img/nome.png">
-                </div>
+			<div class="form-group col-md-2">
+				<label for="ativo">Ativo</label><br>
+				<label class="radio-inline">
+					<input type="radio" name="optativo" checked disabled >Sim
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="optativo" disabled>Não
+				</label>
+			</div>
 
-                <div class="inputgroup">
-                    <input type="email" maxlength="30" name="email" id="email" placeholder="Email">
-                    <img src="../../img/email.png">
-                </div>
+		</div>
+		<hr />
+		<div id="actions" class="row">
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+				<a href="?page=lista_usu" class="btn btn-default">Cancelar</a>
+			</div>
+		</div>
 
-                <div class="inputgroup">
-                    <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha">
-                    <img src="../../img/senha.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="cep" id="cep" placeholder="Cep">
-                    <img src="../../img/local.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
-                    <img src="../../img/local.png">
-                </div>
-
-                <input type="submit" class="btn btn-primary" value="Cadastrar">
-                    
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
-            </form>
-            
-        </div>
-    </main>
-
-    <!--bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
-</html>
+	</form> 
+</div>

@@ -1,58 +1,75 @@
 <?php
-    $id_cli = (int) $_GET["id_cli"];
-
-    $con = mysqli_connect("localhost", "root", "", "keepit");
-
-    $sql = "select * from cliente where id_cli = $id_cli;";
-
-    $result = mysqli_query($con, $sql) or die (mysqli_error($con));
-
-    $info = mysqli_fetch_array($result);
+	$id_cli = (int) $_GET['id_cli'];
+	$sql = mysqli_query($con, "select * from cliente where id_cli = '".$id_cli."';");
+	$row = mysqli_fetch_array($sql);
 ?>
+<div id="main" class="container-fluid">
+	<br><h3 class="page-header">Editar registro de Cliente - <?php echo $id;?></h3>
+	
+	<!-- Área de campos do formulário de edição-->
+	
+	<form action="?page=atualiza_cli&id_cli=<?php echo $row['id_cli']; ?>" method="post">
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>ediçaõ de cliente</title>
-
-     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!--bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-<body>
-    <form action="atualiza_cli.php" method="post">
-        <div class="inputgroup">
-            <input type="hidden" name="id_cli" value='<?php echo $info['id_cli']?>'>
-        </div>
-
-        <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome" value='<?php echo $info['nome']?>'>
-            <img src="img/nome.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="email" maxlength="30" name="email" id="email" placeholder="Email" value='<?php echo $info['email']?>'>
-            <img src="img/email.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="password" maxlength="10" name="senha" id="senha" placeholder="Senha" value='<?php echo $info['senha']?>'>
-            <img src="img/senha.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="text" name="cep" id="cep" placeholder="Cep" value='<?php echo $info['cep']?>'>
-            <img src="img/local.png">
-        </div>
-
-        <input type="submit" value="Atualizar">
-    </form>
-
-    <!--bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
-</html>
+	<!-- 1ª LINHA -->	
+	<div class="row"> 
+		
+		<div class="form-group col-md-1">
+			<label for="id_cli">ID</label>
+			<input readonly type="text" class="form-control" name="id_cli" value="<?php echo $row["id_cli"]; ?>">
+		</div>
+		
+		<div class="form-group col-md-5">
+			<label for="nome">Nome do Cliente</label>
+			<input type="text" class="form-control" name="nome" value="<?php echo $row["nome"]; ?>">
+		</div>
+		
+		<div class="form-group col-md-3">
+			<label for="email">E-mail</label>
+			<input type="email" class="form-control" name="email" value="<?php echo $row["email"]; ?>">
+		</div>
+		
+		<div class="form-group col-md-3">
+			<label for="senha">Senha</label>
+			<input readonly type="text" class="form-control" name="senha" value="<?php echo $row["senha"]; ?>">
+		</div>
+	
+	</div>	
+	
+	<!-- 2ª LINHA -->	
+	<div class="row"> 
+		
+		<div class="form-group col-md-4">
+			<label for="cep">Cep</label>
+			<input type="text" class="form-control" name="cep" value="<?php echo $row["cep"]; ?>">
+		</div>
+		
+		<div class="form-group col-md-2">
+			<label for="nivel">Nível</label>
+			<select class="form-control" id="nivel" name="nivel">
+				<option value="1"<?php if (!(strcmp(1, htmlentities($row['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>>Adm Geral</option>
+				<option value="2"<?php if (!(strcmp(2, htmlentities($row['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>>Adm Restaurante</option>
+				<option value="3"<?php if (!(strcmp(3, htmlentities($row['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>>Cliente</option>		
+			</select>
+		</div>
+		
+		<div class="form-group col-md-2">
+			<label for="ativo">Ativo</label><br>
+			<?php
+			if($row["ativo"]==1){
+				echo "<label>SIM</label>";
+			}else if($row["ativo"]==0){
+				echo "<label>NÃO</label>";
+			}
+			?>
+		</div>
+	</div>
+</div>
+	
+	<hr/>
+	<div id="actions" class="row">
+	 <div class="col-md-12">
+		<a href="?page=lista_cli" class="btn btn-default">Voltar</a>
+		<button type="submit" class="btn btn-primary">Salvar Alterações</button>
+	 </div>
+	</div>
+</div>

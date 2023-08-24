@@ -49,6 +49,15 @@
             <img src="img/local.png">
         </div>
 
+        <div class="inputgroup">
+            <p>Nível:</p><br>
+            <select name="nivel">
+                <option value="1" <?php if(!(strcmp(1, htmlentities($info['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";}?> >Adm geral</option>
+                <option value="2" <?php if(!(strcmp(1, htmlentities($info['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";}?> >Adm restaurante</option>
+                <option value="3" <?php if(!(strcmp(1, htmlentities($info['nivel'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";}?> >Cliente</option>
+            </select>
+        </div>
+
         <input type="submit" value="Atualizar">
     </form>
 

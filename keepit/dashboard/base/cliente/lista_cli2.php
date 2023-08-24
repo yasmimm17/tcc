@@ -16,6 +16,7 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Cep</th>
+            <th>Nível</th>
         </tr>
     </thead>
     <?php
@@ -49,6 +50,11 @@
                 <td>
                     <?php
                         $info['cep']
+                    ?>
+                </td>
+                <td>
+                    <?php
+                        $info['nivel']
                     ?>
                 </td>
             </tr>                    

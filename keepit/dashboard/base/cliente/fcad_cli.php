@@ -46,8 +46,12 @@
                 </div>
 
                 <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
-                    <img src="../../img/local.png">
+                    <p>Nível:</p><br>
+                    <select name="nivel">
+                        <option value="1">Adm Gera</option>
+                        <option value="2">Adm Restaurante</option>
+                        <option value="3">Cliente</option>
+                    </select>
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
