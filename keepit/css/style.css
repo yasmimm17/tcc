@@ -6,6 +6,15 @@
     font-family: 'Nunito', sans-serif;
 }
 
+#logo{
+    width: 10em;
+}
+
+.row {
+    margin-right: 0!important; 
+    margin-left: 0!important;
+}
+
 li{list-style: none;}
 .active{color: #005A09;cursor: default;text-decoration: underline;}
 
@@ -184,12 +193,17 @@ main.cadastro .inputgroup img {
 }
 
 input[type="submit"] {
-    background-color: #4E1C66;
+    color: #005A09!important;
+    background-color: #ffffff;
     margin-top: 10px;
     border-radius: 50px;
-    font-size: 1.5rem;
+    font-size: 1 rem;
     font-weight: bold;
     padding: 5px 20px;
+}
+
+div.cad form a{
+    text-decoration: underline;
 }
 
 main.cadastro p {
@@ -243,9 +257,10 @@ main.reserva h3{
 
 #apres{
     text-align: center;
+    width: 40em;
 }
 
-#apres h1{
+#apres #verde{
     color: #005A09;
 }
 
@@ -255,6 +270,41 @@ main.reserva h3{
     color: white;
     border: none;
     border-radius: 5em;
-    width: 8em;
+    width: 10em;
     font-weight: 900;
+}
+
+#apres button h4{
+    font-weight: bold;
+}
+
+div.circle{
+    background-color: #005A09;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10em;
+}
+
+div.circle2{
+    background-color: #005A09;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    padding: 150px;
+    display: flex;
+}
+
+
+
+.text-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

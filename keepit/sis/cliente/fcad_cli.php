@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <header class="cad">
+<header class="cad">
         <nav>
-            <img src="img/Keep It.png" alt="">
+            <img src="../../img/Keep It.png">
         </nav>
     </header>
     <main class="cadastro">
@@ -27,7 +27,7 @@
             <form action="insere_cli.php" method="post">
                 <div class="inputgroup">
                     <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
-                    <img src="img/nome.png">
+                    <img src="../../img/nome.png">
                 </div>
 
                 <div class="inputgroup">
@@ -45,14 +45,9 @@
                     <img src="../../img/local.png">
                 </div>
 
-                <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" placeholder="Nível">
-                    <img src="../../img/local.png">
-                </div>
-
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
                     
-                <p>Já tem uma conta? <a href="login.php">Entrar</a></p>
+                <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
             </form>
             
         </div>
