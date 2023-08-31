@@ -267,14 +267,19 @@ main.reserva h3{
     background-color: #ffffff;
     width: 8em;
     height: 2em;
+    font-weight: bold;
+}
+
+.text-content button{
+    margin-left: 8em;
+}
+
+.text-content button :hover{
+    background-color: #000000;
 }
 
 .apresentacao{
-    padding: 13em;
-}
-
-.apresentacao button{
-    margin-left: 8em;
+    padding: 10em;
 }
 
 .apresentacao h1{
@@ -287,7 +292,41 @@ main.reserva h3{
 }
 
 .text-content img{
-    width: 30em;
+    width: 25em;
     padding-top: 5em;
     margin-left: 4em;
+}
+
+.text-content2{
+    padding: 2em;
+    border: solid rgb(167, 167, 167);
+    width: 77em;
+    border-radius: 3em;
+    padding-bottom: 5em;
+}
+
+.text-content2 h4{
+    padding-top: 1em;
+    padding-left: 2em;
+    width: 20em;
+}
+
+.text-content2 h1{
+    width: 10em;
+    margin: auto;
+    display: block;
+}
+
+.text-content2 button{
+    margin: auto;
+    display: block;
+    margin-top: 2em;
+}
+
+.home1{
+    
+}
+
+.home2{
+    padding-top: 2em;
 }
