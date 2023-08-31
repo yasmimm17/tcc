@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 #logo{
@@ -255,56 +255,39 @@ main.reserva h3{
     width: 10em;
 }
 
-#apres{
-    text-align: center;
-    width: 40em;
-}
-
-#apres #verde{
+.text-content h1{
+    font-size: 5em;
+    font-weight: 900;
     color: #005A09;
 }
 
-#apres button{
-    padding: 0.5em;
-    background-color: #005A09;
-    color: white;
-    border: none;
-    border-radius: 5em;
-    width: 10em;
-    font-weight: 900;
+.text-content button, .text-content2 button{
+    border: 2px solid #047e10;
+    color: #047e10;
+    background-color: #ffffff;
+    width: 8em;
+    height: 2em;
 }
 
-#apres button h4{
-    font-weight: bold;
+.apresentacao{
+    padding: 13em;
 }
 
-div.circle{
-    background-color: #005A09;
-    width: 50vh;
-    height: 50vh;
-    border-radius: 50%;
-    padding: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-left: 10em;
+.apresentacao button{
+    margin-left: 8em;
 }
 
-div.circle2{
-    background-color: #005A09;
-    width: 50vh;
-    height: 50vh;
-    border-radius: 50%;
-    padding: 150px;
-    display: flex;
+.apresentacao h1{
+    margin-left: 1.6em;
 }
 
+.apresentacao h3{
+    margin-left: 4.6em;
+    width: 20em;
+}
 
-
-.text-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.text-content img{
+    width: 30em;
+    padding-top: 5em;
+    margin-left: 4em;
 }
