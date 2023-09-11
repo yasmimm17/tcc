@@ -323,10 +323,16 @@ main.reserva h3{
     margin-top: 2em;
 }
 
-.home1{
-    
+input[type="search"]{
+    border: none;
+    border-radius: 2em;
+    background-color: #cacaca;
 }
 
-.home2{
-    padding-top: 2em;
+.nav-home{
+    width: 25em;   
+}
+
+.header-home{
+    padding-bottom: 5em;
 }
