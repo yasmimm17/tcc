@@ -1,7 +1,7 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $idreserva_ondemand = $_POST["id_reserva"];
+     $idreserva_ondemand = $_POST["idreserva_ondemand"];
      $qtde_pessoas = $_POST["qtde_pessoas"];
      $cel_contato = $_POST["cel_contato"];
      $situacao_reserva = $_POST["situacao_reserva"];

@@ -25,10 +25,6 @@
             </div>
 
             <form action="insere_mesa.php" method="post">
-                <div class="inputgroup">
-                    <input type="text" maxlength="60" name="nome_estilo_mesa" id="nome_estilo_mesa" placeholder="Nome">
-                    <img src="img/nome.png">
-                </div>
 
                 <div class="inputgroup">
                     <input type="number" name="lugares_mesa" id="lugares_mesa" placeholder="Lugares">

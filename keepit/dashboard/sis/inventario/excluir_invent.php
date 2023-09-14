@@ -1,9 +1,9 @@
 <?php
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
-     $id_mesa = (int) $_GET["id_mesa"];
+     $id_invent = (int) $_GET["id_invent"];
 
-     $sql = "delete from inventario where id_mesa = $id_mesa;";
+     $sql = "delete from inventario where id_invent = $id_invent;";
 
      $result = mysqli_query($con, $sql);
      

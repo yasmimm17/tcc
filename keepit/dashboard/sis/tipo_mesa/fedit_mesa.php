@@ -30,11 +30,6 @@
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="nome_estilo_mesa" id="nome_estilo_mesa" placeholder="Nome" value='<?php echo $info['nome_estilo_mesa']?>'>
-            <img src="img/nome.png">
-        </div>
-
-        <div class="inputgroup">
             <input type="number" name="lugares_mesa" id="lugares_mesa" placeholder="Lugares" value='<?php echo $info['lugares_mesa']?>'>
             <img src="img/email.png">
         </div>

@@ -227,7 +227,15 @@ main.reserva h1{
 }
 
 main.reserva h3{
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+#verde{
+    color: #005A09;
+}
+
+main.reserva a{
+    color: #005A09;
 }
 
 #user{
@@ -250,7 +258,8 @@ main.reserva h3{
     border-radius: 3em;
     border: none;
     padding: 0.5em;
-    background-color: rgb(148, 148, 148);
+    color: white;
+    background-color: rgb(153, 24, 24);
     font-weight: bold;
     width: 10em;
 }
@@ -329,10 +338,37 @@ input[type="search"]{
     background-color: #cacaca;
 }
 
-.nav-home{
-    width: 25em;   
-}
-
 .header-home{
     padding-bottom: 5em;
 }
+
+#header-img{
+    width: 1.5em;
+    margin-left: -2em;
+}
+
+.inputgroup input {
+    border-radius: 20px;
+    background-color: #C2C2C2;
+    padding: 5px 10px 5px 40px;
+    width: 100%;
+    
+}
+.inputgroup {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.inputgroup img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.home1{
+    
+}
+
