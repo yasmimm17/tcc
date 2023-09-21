@@ -214,31 +214,31 @@
 
             // ---- MESA ----///
             case 'lista_mesa':
-                include "sis/restaurante/lista_mesa.php";
+                include "sis/tipo_mesa/lista_mesa.php";
                 break;
             
             case 'fcad_mesa':
-                include "sis/restaurante/fcad_mesa.php";
+                include "sis/tipo_mesa/fcad_mesa.php";
                 break;
             
             case 'insere_mesa':
-                include "sis/restaurante/insere_mesa.php";
+                include "sis/tipo_mesa/insere_mesa.php";
                 break;
             
             case 'fedit_mesa':
-                include "sis/restaurante/fedit_mesa.php";
+                include "sis/tipo_mesa/fedit_mesa.php";
                 break;
                 
             case 'view_mesa':
-                include "sis/restaurante/view_mesa.php";
+                include "sis/tipo_mesa/view_mesa.php";
                 break;
             
             case 'excluir_mesa':
-                include "sis/restaurante/excluir_mesa.php";
+                include "sis/tipo_mesa/excluir_mesa.php";
                 break;
             
             case 'atualiza_mesa':
-                include "sis/restaurante/atualiza_mesa.php";
+                include "sis/tipo_mesa/atualiza_mesa.php";
                 break;
             default:
                 include "base/home.php";

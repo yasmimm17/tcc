@@ -9,10 +9,28 @@
                 <a class="nav-link" href="?page=home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?page=lista_alu">Alunos</a>
+                <a class="nav-link" href="?page=lista_cli">Clientes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?page=lista_usu">Usuários</a>
+                <a class="nav-link" href="?page=lista_invent">Inventários</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_local">Localidades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_marca">Marca da rede</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_demand">Reservas por demanda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_fixa">Reservas fixas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_res">Restaurantes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?page=lista_mesa">Mesas</a>
             </li>
         </ul>
     </div>

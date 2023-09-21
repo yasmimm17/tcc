@@ -31,6 +31,7 @@
                                 <li>Edição</li>
                                 <li>Lista</li>
                                 <li>Detalhe - View</li>
+                                <li>Exclusão</li>
                             </ul>
                         </div>
                 </div>
