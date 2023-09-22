@@ -1,11 +1,11 @@
-const button = document.querySelector("button");
-const modal = document.querySelector("dialog");
-const buttonClose = document.querySelector("dialog button");
-
-button.onclick = function() {
-    modal.show();
+function closemodal() {
+    let modal = document.querySelector(".modal__container");
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
 }
 
-buttonClose.onclick = function() {
-    modal.close();
+function openmodal() {
+    let modal = document.querySelector(".modal__container");
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
 }

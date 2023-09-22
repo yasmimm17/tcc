@@ -2,12 +2,10 @@
      $con = mysqli_connect("localhost", "root", "", "keepit");
 
      $cep = $_POST["cep"];
-     $logradouro = $_POST["logradouro"];
-     $bairro = $_POST["bairro"];
      $cidade = $_POST["cidade"];
      $uf = $_POST["uf"];
 
-     $sql = "update localidade set logradouro='$logradouro', bairro='$bairro', cidade='$cidade', uf='$uf' where cep = $cep;";
+     $sql = "update localidade set cidade='$cidade', uf='$uf' where cep = $cep;";
 
      $result = mysqli_query($con, $sql);
 

@@ -40,9 +40,15 @@
                     <img src="../../img/senha.png">
                 </div>
 
-                <div class="inputgroup">
-                    <input type="text" name="cep" id="cep" placeholder="Cep">
-                    <img src="../../img/local.png">
+                <button type="button" onclick="openmodal()" class="open__modal">Localidade</button>
+
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <span onclick="closemodal()" class="close__modal">x</span>
+                        <input type="text" name="cep" id="cep" placeholder="Cep" >
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" >
+                        <input type="text" name="uf" id="uf" placeholder="UF" >
+                    </div>
                 </div>
 
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
@@ -55,5 +61,7 @@
 
     <!--bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="../../js/script.js"></script>
 </body>
 </html>

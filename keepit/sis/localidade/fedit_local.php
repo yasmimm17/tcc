@@ -35,16 +35,6 @@
         </div>
 
         <div class="inputgroup">
-            <input type="text" maxlength="60" name="logradouro" id="logradouro" placeholder="logradouro" value='<?php echo $info['logradouro']?>'>
-            <img src="img/email.png">
-        </div>
-
-        <div class="inputgroup">
-            <input type="text" maxlength="60" name="bairro" id="bairro" placeholder="bairro" value='<?php echo $info['bairro']?>'>
-            <img src="img/senha.png">
-        </div>
-
-        <div class="inputgroup">
             <input type="text" maxlength="60" name="cidade" id="cidade" placeholder="cidade" value='<?php echo $info['cidade']?>'>
             <img src="img/local.png">
         </div>
