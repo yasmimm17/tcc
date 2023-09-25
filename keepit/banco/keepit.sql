@@ -20,23 +20,6 @@ DROP DATABASE IF EXISTS `keepit`;
 CREATE DATABASE IF NOT EXISTS `keepit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `keepit`;
 
--- Copiando estrutura para tabela keepit.cliente
-DROP TABLE IF EXISTS `cliente`;
-CREATE TABLE IF NOT EXISTS `cliente` (
-  `id_cli` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `senha` varchar(15) NOT NULL,
-  `cep` varchar(10) NOT NULL DEFAULT '',
-  `nivel` int(1) DEFAULT NULL,
-  `ativo` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id_cli`),
-  KEY `cep` (`cep`),
-  CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Exportação de dados foi desmarcado.
-
 -- Copiando estrutura para tabela keepit.inventario
 DROP TABLE IF EXISTS `inventario`;
 CREATE TABLE IF NOT EXISTS `inventario` (
@@ -57,10 +40,9 @@ CREATE TABLE IF NOT EXISTS `inventario` (
 DROP TABLE IF EXISTS `localidade`;
 CREATE TABLE IF NOT EXISTS `localidade` (
   `cep` varchar(10) NOT NULL,
-  `logradouro` varchar(100) NOT NULL,
-  `bairro` varchar(50) NOT NULL,
   `cidade` varchar(50) NOT NULL,
   `uf` char(2) NOT NULL,
+  `ativo` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`cep`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -92,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `reserva_fixa` (
   KEY `id_res` (`id_res`),
   KEY `id_cli` (`id_cli`),
   CONSTRAINT `reserva_fixa_ibfk_1` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`),
-  CONSTRAINT `reserva_fixa_ibfk_2` FOREIGN KEY (`id_cli`) REFERENCES `cliente` (`id_cli`)
+  CONSTRAINT `reserva_fixa_ibfk_2` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
@@ -109,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `reserva_ondemand` (
   PRIMARY KEY (`idreserva_ondemand`),
   KEY `id_cli` (`id_cli`),
   KEY `id_res` (`id_res`),
-  CONSTRAINT `reserva_ondemand_ibfk_1` FOREIGN KEY (`id_cli`) REFERENCES `cliente` (`id_cli`),
+  CONSTRAINT `reserva_ondemand_ibfk_1` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`),
   CONSTRAINT `reserva_ondemand_ibfk_2` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -123,11 +105,9 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   `nr_res` varchar(20) DEFAULT NULL,
   `comp_res` varchar(100) DEFAULT NULL,
   `tipo_sede_res` char(1) DEFAULT NULL,
-  `usuario` varchar(45) DEFAULT NULL,
-  `senha` varchar(20) DEFAULT NULL,
-  `nivel` int(11) DEFAULT NULL,
   `cep` varchar(10) NOT NULL,
   `id_marca` int(11) NOT NULL,
+  `ativo` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_res`),
   KEY `cep` (`cep`),
   KEY `id_marca` (`id_marca`),
@@ -144,6 +124,24 @@ CREATE TABLE IF NOT EXISTS `tipo_mesa` (
   `lugares_mesa` int(11) NOT NULL,
   PRIMARY KEY (`id_mesa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Exportação de dados foi desmarcado.
+
+-- Copiando estrutura para tabela keepit.usuario
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id_cli` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `senha` varchar(15) NOT NULL,
+  `cep` varchar(10) NOT NULL DEFAULT '',
+  `nivel` int(1) DEFAULT NULL,
+  `ativo` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id_cli`),
+  KEY `cep` (`cep`),
+  KEY `nivel` (`nivel`),
+  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
