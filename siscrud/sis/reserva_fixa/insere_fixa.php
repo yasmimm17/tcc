@@ -1,25 +1,24 @@
 <?php
-     $horario = $_POST["horario"];
-     $qtde_pessoas = $_POST["qtde_pessoas"];
-     $obs = $_POST["obs"];
-     $cel_contato = $_POST["cel_contato"];
-     $situacao_reserva = $_POST["situacao_reserva"];
-     $id_res = $_POST["id_res"];
-     $id_cli = $_POST["id_cli"];
+    if(!isset($_POST["matricula"])) header("Location: \siscrud/index.php?page=home&msg=1");
+    $id_reserva               = $_POST["id_reserva"];
+    $horario             = $_POST["horario"];
+    $qtde_pessoas            = $_POST["qtde_pessoas"];
+    $obs             = $_POST["obs"];
+    $cel_contato         = $_POST["cel_contato"];
+    $situacao_reserva         = $_POST["situacao_reserva"];
+    $id_res           = $_POST["id_res"];
+    $id_cli         = $_POST["is_cli"];
 
-     $con = mysqli_connect("localhost", "root", "", "keepit");
+    $sql = "insert into reserva_fixa values ";
+    $sql .= "('0','$horario', '$qtde_pessoas', '$obs', '$cel_contato', '$situacao_reserva','$id_res','$id_cli');";
 
-     $sql = "insert into reserva_fixa values ";
-     $sql .= "(0, '$horario', '$qtde_pessoas', '$obs', '$cel_contato', '$situacao_reserva', '$id_res', '$id_cli')"; 
+    $resultado = mysqli_query($con, $sql)or die(mysqli_error());
 
-     //echo $sql; exit;
-
-     $result = mysqli_query($con, $sql);
-
-     if($result){
-          echo "Reserva incluída com sucesso.<br><hr>";
-          include "lista_fixa.php";
-     }else{
-          echo "ERRO";
-     }
+    if($resultado){
+        header('Location: \siscrud/index.php?page=lista_fixa&msg=1');
+        mysqli_close($con);
+    }else{
+        header('Location: \siscrud/index.php?page=lista_fixa&msg=4');
+        mysqli_close($con);
+    }
 ?>

@@ -2,7 +2,7 @@
 	$nivel_necessario = 2;
 	include "base/testa_nivel.php";
 	$id_marca = $_GET['id_marca'];
-	$sql = mysqli_query($con, "select * from marca|_rede where id_marca = '".$id_marca."';");
+	$sql = mysqli_query($con, "select * from marca_rede where id_marca = '".$id_marca."';");
 	$row = mysqli_fetch_array($sql);
 ?>
 <div id="main" class="container-fluid">

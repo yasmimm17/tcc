@@ -1,73 +1,56 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keep It</title>
-
-    <!--bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- css  -->
-    <link rel="stylesheet" href="../../css/style.css">
-</head>
-<body>
-    <header class="cad">
-        <nav>
-            <img src="img/Keep It.png" alt="">
-        </nav>
-    </header>
-    <main class="cadastro">
-        <div class="cad">
-            <div class="ola">
-                <h2>Olá!</h2>
-                <h5>Esperamos por você!</h5>
-            </div>
-
-            <form action="insere_fixa.php" method="post">
-                <div class="inputgroup">
-                    <input type="time" name="horario" id="horario" placeholder="Horário">
-                    <img src="img/nome.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="number" name="qtde_pessoas" id="qtde_pessoas" placeholder="Quantidade de pessoas">
-                    <img src="../../img/email.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" maxlength="60" name="obs" id="obs" placeholder="Observação">
-                    <img src="../../img/senha.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="text" name="cel_contato" id="cel_contato" placeholder="Celular">
-                    <img src="../../img/local.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="number" name="situacao_reserva" id="situacao_reserva" placeholder="Situação da reserva">
-                    <img src="../../img/local.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="number" name="id_res" id="id_res" placeholder="ID do restaurante">
-                    <img src="../../img/local.png">
-                </div>
-
-                <div class="inputgroup">
-                    <input type="number" name="id_cli" id="id_cli" placeholder="ID do cliente">
-                    <img src="../../img/local.png">
-                </div>
-
-                <input type="submit" class="btn btn-primary" value="Cadastrar">
-                    
-            </form>
-            
-        </div>
-    </main>
-
-    <!--bootstrap script-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php
+	$nivel_necessario = 1;
+	include "base/testa_nivel.php";
+?>
+<div id="main" class="container-fluid">
+	<div>
+		<h2>Reservas</h2>
+	</div>
+	<form action="?page=insere_fixa" method="post">
+		<!-- 1ª LINHA -->	
+		<div class="row"> 
+			<div class="form-group col-md-1">
+				<label for="id_fixa">ID</label>
+				<input type="number" class="form-control" name="id_fixa" disabled="disabled" value="0">
+			</div>
+			<div class="form-group col-md-2">
+				<label for="horario">Horário</label>
+				<input type="time" class="form-control" name="horario">
+			</div>
+			<div class="form-group col-md-2">
+				<label for="qtde_pessoas">Quantidade de pessoas</label>
+				<input type="number" class="form-control" name="qtde_pessoas">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="obs">Observação</label>
+				<input type="text" class="form-control" name="obs">
+			</div>
+			<div class="form-group col-md-2">
+				<label for="cel_contato">Celular para contato</label>
+				<input type="text" class="form-control" name="cel_contato" placeholder="(xx) xxxxx-xxxx">
+			</div>
+		</div>
+		<!-- 2ª LINHA -->
+		<div class="row"> 
+            <div class="form-group col-md-2">
+				<label for="situacao_reserva">Situação da reserva</label>
+				<input type="text" class="form-control" name="situacao_reserva">
+			</div>
+		    <div class="form-group col-md-2">
+				<label for="id_res">ID do Restaurante</label>
+				<input type="number" class="form-control" name="id_res">
+			</div>
+		    <div class="form-group col-md-2">
+				<label for="id_cli">ID do Cliente</label>
+				<input type="number" class="form-control" name="id_cli">
+			</div>
+		</div>
+		<hr />
+		<div id="actions" class="row">
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+				<a href="?page=lista_fixa" class="btn btn-danger">Cancelar</a>
+			</div>
+		</div>
+	</form> 
+</div>

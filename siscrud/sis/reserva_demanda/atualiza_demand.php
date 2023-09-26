@@ -1,21 +1,23 @@
 <?php
-     $con = mysqli_connect("localhost", "root", "", "keepit");
+    if(!isset($_POST["matricula"])) header("Location: \siscrud/index.php?page=home&msg=1");
+    $idreserva_ondemand          = $_POST["idreserva_ondemand"];
+    $qtde_pessoas        = $_POST["qtde_pessoas"];
+    $cel_contato       = $_POST["cel_contato"];
+    $sit_reserva_ond          = $_POST["sit_reserva_ond"];
+    $id_cli        = $_POST["id_cli"];
+    $id_res        = $_POST["id_res"];
 
-     $idreserva_ondemand = $_POST["id_reserva"];
-     $qtde_pessoas = $_POST["qtde_pessoas"];
-     $cel_contato = $_POST["cel_contato"];
-     $situacao_reserva = $_POST["situacao_reserva"];
-     $id_res = $_POST["id_res"];
-     $id_cli = $_POST["id_cli"];
+    $sql = "update reserva_ondemand set ";
+    $sql .= "qtde_pessoas='$qtde_pessoas', cel_contato='$cel_contato', sit_reserva_ond='$sit_reserva_ond', id_cli='$id_cli', id_res='$id_res'";
+    $sql .= "where idreserva_ondemand = '$idreserva_ondemand';";
 
-     $sql = "update reserva_fixa set qtde_pessoas='$qtde_pessoas', cel_contato='$cel_contato', situacao_reserva='$situacao_reserva', id_res='$id_res', id_cli='$id_cli' where idreserva_ondemand = $idreserva_ondemand;";
+    $resultado = mysqli_query($con, $sql)or die(mysqli_error());
 
-     $result = mysqli_query($con, $sql);
-
-     if($result){
-          echo "Reserva atualizada com sucesso.<br><hr>";
-          include "lista_demand.php";
-     }else{
-          echo "ERRO";
-     }
+    if($resultado){
+        header('Location: \siscrud/index.php?page=lista_demand&msg=2');
+        mysqli_close($con);
+    }else{
+        header('Location: \siscrud/index.php?page=lista_demand&msg=4');
+        mysqli_close($con);
+    }
 ?>
