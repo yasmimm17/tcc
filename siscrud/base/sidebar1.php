@@ -11,9 +11,15 @@
         </a>
       </li>
       <li>
-        <a href="?page=lista_disc">
+        <a href="?page=lista_fixa">
           <i class='bx bxs-book'></i>
-          <span class="link_name">Disciplina</span>
+          <span class="link_name">Reserva fixa</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_demand">
+          <i class='bx bxs-book'></i>
+          <span class="link_name">Reserva por demanda</span>
         </a>
       </li>
       <li>

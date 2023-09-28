@@ -11,21 +11,45 @@
         </a>
       </li>
       <li>
-        <a href="?page=lista_alu">
-          <i class='bx bxs-graduation'></i>
-          <span class="link_name">Aluno</span>
-        </a>
-      </li>
-      <li>
-        <a href="?page=lista_disc">
+        <a href="?page=lista_local">
           <i class='bx bxs-book'></i>
-          <span class="link_name">Disciplina</span>
+          <span class="link_name">Localidade</span>
         </a>
       </li>
       <li>
-        <a href="?page=lista_prod">
+        <a href="?page=lista_marca">
+          <i class='bx bxs-book'></i>
+          <span class="link_name">Marca da Rede</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_res">
+          <i class='bx bxs-graduation'></i>
+          <span class="link_name">Restaurante</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_mesa">
+          <i class='bx bxs-book'></i>
+          <span class="link_name">Tipo de mesa</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_invent">
+          <i class='bx bxs-book'></i>
+          <span class="link_name">Inventário</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_demand">
+          <i class='bx bxs-book'></i>
+          <span class="link_name">Reserva por demanda</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_fixa">
           <i class='bx bx-cart' ></i>
-          <span class="link_name">Produto</span>
+          <span class="link_name">Reserva fixa</span>
         </a>
       </li>
       <li>
@@ -34,5 +58,5 @@
           <span class="link_name">Sair</span>
         </a>
       </li>
-</ul>
+    </ul>
   </div>

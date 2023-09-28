@@ -9,10 +9,10 @@
 		<form action="validacao.php" method="post">
 			<fieldset>
 			<legend>Dados de Login</legend>
-				<label for="txUsuario">Usuario</label>
-				<input type="text" name="usuario" id="txUsuario" maxlength="25" />
-				<label for="txSenha">Senha</label>
-				<input type="password" name="senha" id="txSenha" />
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" maxlength="50" />
+				<label for="senha">Senha</label>
+				<input type="password" name="senha" id="senha" />
 
 				<input type="submit" value="Entrar" />
 			</fieldset>

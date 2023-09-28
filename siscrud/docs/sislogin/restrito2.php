@@ -9,7 +9,7 @@ include "base/testa_nivel.php";
 	  <title> Restrito 2!</title>
 	</head>
 	<body bgcolor='blue'>
-		<h1>Página restrita ao Administrador 2</h1>
+		<h1>Página restrita ao Administrador do Restaurante</h1>
 		<p>Ola, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
 
 		<a href="logout.php">Logout</a>

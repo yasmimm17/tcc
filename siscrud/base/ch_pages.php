@@ -16,27 +16,27 @@
                 include "sis/inventario/lista_invent.php";
                 break;
             
-            case 'fadd_alu':
+            case 'fcad_invent':
                 include "sis/inventario/fcad_invent.php";
                 break;
             
-            case 'insere_alu':
+            case 'insere_invent':
                 include "sis/inventario/insere_invent.php";
                 break;
             
-            case 'fedita_alu':
+            case 'fedit_invent':
                 include "sis/inventario/fedit_invent.php";
                 break;
                 
-            case 'view_alu':
+            case 'view_invent':
                 include "sis/inventario/view_invent.php";
                 break;
             
-            case 'excluir_alu':
+            case 'excluir_invent':
                 include "sis/inventario/excluir_invent.php";
                 break;
             
-            case 'atualiza_alu':
+            case 'atualiza_invent':
                 include "sis/inventario/atualiza_invent.php";
                 break;
             // ---- USUÁRIOS ----///
@@ -44,7 +44,7 @@
                 include "sis/usuario/lista_usu.php";
                 break;
             
-            case 'fadd_usu':
+            case 'fcad_usu':
                 include "sis/usuario/fcad_usu.php";
                 break;
             
@@ -52,7 +52,7 @@
                 include "sis/usuario/insere_usu.php";
                 break;
             
-            case 'fedita_usu':
+            case 'fedit_usu':
                 include "sis/usuario/fedit_usu.php";
                 break;
                 
@@ -80,28 +80,35 @@
                 include "sis/localidade/lista_local.php";
                 break;
             
-            case 'fadd_disc':
+            case 'fcad_local':
                 include "sis/localidade/fcad_local.php";
                 break;
             
-            case 'insere_disc':
+            case 'insere_local':
                 include "sis/localidade/insere_local.php";
                 break;
             
-            case 'fedita_disc':
+            case 'fedit_local':
                 include "sis/localidade/fedit_local.php";
                 break;
                 
-            case 'view_disc':
+            case 'view_local':
                 include "sis/localidade/view_local.php";
                 break;
-            
-            case 'excluir_disc':
-                include "sis/localidade/excluir_local.php";
-                break;
-            
-            case 'atualiza_disc':
+
+            case 'atualiza_local':
                 include "sis/localidade/atualiza_local.php";
+            
+            case 'block_local':
+                include "sis/localidade/block_local.php";
+                break;
+                
+            case 'ativa_local':
+                include "sis/localidade/ativa_local.php";
+                break;
+
+            default:
+                include "base/home.php";
                 break;
             // ---- MARCA DA REDE ----///
             case 'lista_marca':
@@ -210,13 +217,21 @@
             case 'view_res':
                 include "sis/restaurante/view_res.php";
                 break;
-            
-            case 'excluir_res':
-                include "sis/restaurante/excluir_res.php";
-                break;
-            
+
             case 'atualiza_res':
                 include "sis/restaurante/atualiza_res.php";
+                break;
+            
+            case 'block_res':
+                include "sis/restaurante/block_res.php";
+                break;
+                
+            case 'ativa_res':
+                include "sis/restaurante/ativa_res.php";
+                break;
+            
+            default:
+                include "base/home.php";
                 break;
 
             // ---- MESA ----///

@@ -9,10 +9,10 @@
                 <a class="nav-link" href="?page=home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?page=lista_alu">Alunos</a>
+                <a class="nav-link" href="?page=lista_local">Localidade</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?page=lista_usu">Usuários</a>
+                <a class="nav-link" href="?page=lista_marca">Marca da Rede</a>
             </li>
         </ul>
     </div>

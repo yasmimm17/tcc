@@ -1,16 +1,16 @@
 <?php
-// Verifica se houve POST e se o usuário ou a senha estão vazios
-if (!empty($_POST) and (empty($_POST['usuario']) or empty($_POST['senha']))) {
+// Verifica se houve POST e se o email ou a senha estão vazios
+if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
 	header("Location: login.html"); exit;
 }
 // Tenta se conectar ao servidor MySQL e ao DB
 include "config.php";
 
-$usuario = mysqli_real_escape_string($con, $_POST['usuario']);
+$usuario = mysqli_real_escape_string($con, $_POST['email']);
 $senha = mysqli_real_escape_string($con, $_POST['senha']);
 
-// Validação do usuário/senha digitados
-$sql  = "select id, usuario, nivel from usuario where (usuario = '". $usuario ."') ";
+// Validação do email/senha digitados
+$sql  = "select id_cli, email, nome, cep, nivel from usuario where (email = '". $usuario ."') ";
 $sql .= "and (senha = '". sha1($senha) ."') and (ativo = 1) limit 1";
 
 //echo $sql; exit;
@@ -18,7 +18,7 @@ $sql .= "and (senha = '". sha1($senha) ."') and (ativo = 1) limit 1";
 $query = mysqli_query($con, $sql);
 
 if (mysqli_num_rows($query) != 1) {
-	// Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
+	// Mensagem de erro quando os dados são inválidos e/ou o email não foi encontrado
 	header('Content-Type: text/html; charset=utf-8');
 	echo "Login invalido!"; exit;
 } else {
@@ -31,8 +31,8 @@ if (mysqli_num_rows($query) != 1) {
 	if (!isset($_SESSION)) session_start();
 
 	// Salva os dados encontrados na sessão
-	$_SESSION['UsuarioID'] = $resultado['id'];
-	$_SESSION['UsuarioNome'] = $resultado['usuario'];
+	$_SESSION['UsuarioID'] = $resultado['id_cli'];
+	$_SESSION['UsuarioNome'] = $resultado['email'];
 	$_SESSION['UsuarioNivel'] = $resultado['nivel'];
 
 	// Redireciona o visitante
