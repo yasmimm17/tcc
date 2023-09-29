@@ -47,17 +47,17 @@
 					echo "<td>".$info['nr_res']."</td>";
 					echo "<td>".$info['comp_res']." </td>";
 					if($info['tipo_sede_res'] == 1){
-                              echo "<td>PRÓPRIA</td>";
-                         }else if($info['tipo_sede_res'] == 0){
-                              echo "<td>FILIAL</td>";
-                         }
-                         echo "<td>".$info['cep']." </td>";
-                         echo "<td>".$info['id_marca']." </td>";
-                         if($info['ativo'] == 1){
-                              echo "<td>SIM</td>";
-                         }else if($info['ativo'] == 0){
-                              echo "<td>NÃO</td>";
-                         }
+                        echo "<td>PRÓPRIA</td>";
+                    }else if($info['tipo_sede_res'] == 0){
+                        echo "<td>FILIAL</td>";
+                    }
+                    echo "<td>".$info['cep']." </td>";
+            		echo "<td>".$info['id_marca']." </td>";
+                    if($info['ativo'] == 1){
+                        echo "<td>SIM</td>";
+                    }else if($info['ativo'] == 0){
+                        echo "<td>NÃO</td>";
+                    }
 					echo "<td><div class='btn-group btn-group-xs'>";
 						echo "<a class='btn btn-outline-info btn-xs' href=?page=view_res&id_res=".$info['id_res']."> <i class='bx bxs-user-detail'></i> </a>";
 						echo "<a class='btn btn-outline-warning btn-xs' href=?page=fedit_res&id_res=".$info['id_res']."> <i class='bx bxs-edit-alt'></i> </a>";

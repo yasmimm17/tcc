@@ -107,9 +107,6 @@
                 include "sis/localidade/ativa_local.php";
                 break;
 
-            default:
-                include "base/home.php";
-                break;
             // ---- MARCA DA REDE ----///
             case 'lista_marca':
                 include "sis/marca_rede/lista_marca.php";
@@ -228,10 +225,6 @@
                 
             case 'ativa_res':
                 include "sis/restaurante/ativa_res.php";
-                break;
-            
-            default:
-                include "base/home.php";
                 break;
 
             // ---- MESA ----///

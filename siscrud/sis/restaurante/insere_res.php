@@ -16,10 +16,10 @@
      $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
 
      if($resultado){
-          header('Location: \siscrud/index.php?page=lista_res&msg=2');
+          header('Location: \GitHub/tcc/siscrud/index.php?page=lista_res&msg=2');
          mysqli_close($con);
      }else{
-          header('Location: \siscrud/index.php?page=lista_res&msg=5');
+          header('Location: \GitHub/tcc/siscrud/index.php?page=lista_res&msg=5');
          mysqli_close($con);
      }
      

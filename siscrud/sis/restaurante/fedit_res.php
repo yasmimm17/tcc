@@ -46,7 +46,7 @@
 			<label for="cep">Cep</label>
 			<input type="text" class="form-control" name="cep" value="<?php echo $row['cep'] ?>">
 		</div>
-		<div class="form-group col-md-1">
+		<div class="form-group col-md-2">
 			<label for="id_marca">ID da Marca</label>
 			<input type="number" class="form-control" name="id_marca" value="<?php echo $row['id_marca'] ?>">
 		</div>

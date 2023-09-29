@@ -1,5 +1,5 @@
 <?php
-    if(!isset($_POST["matricula"])) header("Location: \siscrud/index.php?page=home&msg=1");
+    if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
     $nome_marca        = $_POST["nome_marca"];
     $logo_marca       = $_POST["logo_marca"];
 
@@ -9,10 +9,10 @@
     $resultado = mysqli_query($con, $sql)or die(mysqli_error());
 
     if($resultado){
-        header('Location: \siscrud/index.php?page=lista_marca&msg=1');
+        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1');
         mysqli_close($con);
     }else{
-        header('Location: \siscrud/index.php?page=lista_marca&msg=4');
+        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=4');
         mysqli_close($con);
     }
 ?>

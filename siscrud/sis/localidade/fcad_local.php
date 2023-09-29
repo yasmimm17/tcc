@@ -10,7 +10,7 @@
 		<div id="linha01" class="row"> 
 			<div class="form-group col-md-3">
 				<label for="cep">Cep</label>
-				<input type="text" disabled="disabled" class="form-control" name="cep">
+				<input type="text" class="form-control" name="cep">
 			</div>
 			
 			<div class="form-group col-md-3">

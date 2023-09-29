@@ -6,7 +6,7 @@ include "base/testa_nivel.php";
 	<div>
 		<h2>Marca da Rede</h2>
 	</div>
-	<form action="?page=insere_marca" method="post">
+	<form action="?page=insere_marca" method="post" enctype="multipart/form-data">
 		<!-- 1ª LINHA -->	
 		<div class="row"> 
 			<div class="form-group col-md-1">

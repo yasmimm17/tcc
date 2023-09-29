@@ -19,7 +19,7 @@ $query = mysqli_query($con, $sql);
 
 if (mysqli_num_rows($query) != 1) {
 	// Mensagem de erro quando os dados são inválidos e/ou o email não foi encontrado
-	header('Content-Type: text/html; charset=utf-8');
+	//header('Content-Type: text/html; charset=utf-8');
 	echo "Login invalido!"; exit;
 } else {
 	// Salva os dados encontados na variável $resultado

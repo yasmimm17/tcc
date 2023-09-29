@@ -1,5 +1,5 @@
 ﻿<?php
-if(!isset($_POST["matricula"])) header("Location: \siscrud/index.php?page=home&msg=1");
+if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
 $nome		= $_POST["nome"];
 $email		= $_POST["email"];
 $senha			= $_POST["senha"];
@@ -12,10 +12,10 @@ $sql .= "('0','$nome', '$email', '".sha1($senha)."', '$cep','$nivel','1');";
 $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
 
 if($resultado){
-	header('Location: \siscrud/index.php?page=lista_usu&msg=1');
+	header('Location: \GitHub/tcc/siscrud/index.php?page=lista_usu&msg=1');
 	mysqli_close($con);
 }else{
-	header('Location: \siscrud/index.php?page=lista_usu&msg=6');
+	header('Location: \GitHub/tcc/siscrud/index.php?page=lista_usu&msg=6');
 	mysqli_close($con);
 }
 ?>

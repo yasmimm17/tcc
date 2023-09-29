@@ -28,10 +28,10 @@
 			<div class="form-group col-md-2">
 				<label for="tipo_sede_res">Sede</label><br>
 				<label class="radio-inline">
-					<input type="radio" name="optativo" checked disabled>Própria
+					<input type="radio" name="optativo">Própria
 				</label>
 				<label class="radio-inline">
-					<input type="radio" name="optativo" disabled>Filial
+					<input type="radio" name="optativo">Filial
 				</label>
 			</div>
 		</div>

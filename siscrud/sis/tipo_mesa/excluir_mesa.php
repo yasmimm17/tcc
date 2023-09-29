@@ -1,16 +1,16 @@
 <?php
-     $con = mysqli_connect("localhost", "root", "", "keepit");
+if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
+$id_mesa = $_GET['id_mesa'];
+ 
+$sql = "delete from tipo_mesa where id_mesa = '$id_mesa';"; 
 
-     $id_mesa = (int) $_GET["id_mesa"];
+$resultado = mysqli_query($con, $sql)or die(mysqli_error());    
 
-     $sql = "delete from tipo_mesa where id_mesa = $id_mesa;";
-
-     $result = mysqli_query($con, $sql);
-     
-     if($result){
-          echo "Tipo de mesa excluído com sucesso.<br><hr>";
-          include "lista_mesa.php";
-     }else{
-          echo "ERRO";
-     }
+if ($resultado) {
+    header('Location: \GitHub/tcc/siscrud/index.php?page=lista_mesa&msg=3');
+    mysqli_close($con);
+}else{
+    header('Location: \GitHub/tcc/siscrud/index.php?page=lista_mesa&msg=4');
+    mysqli_close($con);
+}
 ?>

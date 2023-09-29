@@ -18,22 +18,29 @@ DROP DATABASE IF EXISTS `sistema`;
 CREATE DATABASE IF NOT EXISTS `sistema` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `sistema`;
 
--- Copiando estrutura para tabela sistema.usuario
-DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE IF NOT EXISTS `usuario` (
-  `id_cli` int(11) unsigned NOT NULL AUTO_INCREMENT,
+-- Copiando estrutura para tabela sistema.usuarios
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) DEFAULT NULL,
-  `email` varchar(25) DEFAULT NULL,
+  `usuario` varchar(25) DEFAULT NULL,
   `senha` varchar(40) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `nivel` int(1) unsigned DEFAULT 1,
   `ativo` tinyint(1) DEFAULT 1,
-  `cep` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`id_cli`) USING BTREE,
-  UNIQUE KEY `usuario` (`email`) USING BTREE,
+  `cadastro` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `usuario` (`usuario`),
   KEY `nivel` (`nivel`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela sistema.usuarios: 3 rows
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+REPLACE INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `email`, `nivel`, `ativo`, `cadastro`) VALUES
+	(3, 'Admin1', 'admin1', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin@demo.com.br', 1, 1, '2016-09-13 11:12:00'),
+	(5, 'Admin2', 'admin2', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin2@mail.com', 2, 1, '2019-04-11 00:00:00'),
+	(6, 'Admin3', 'admin3', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin3@mail.com', 3, 1, '2019-04-11 00:00:00');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

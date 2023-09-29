@@ -1,20 +1,21 @@
 <?php
-     $con = mysqli_connect("localhost", "root", "", "keepit");
+    $conect = mysqli_connect('localhost', 'root', '', 'keepit');
 
-     $sql = "select * from marca_rede;";
+    $sql = "select * from marca_rede;";
+    $resposta = mysqli_query($conect, $sql);
 
-     $result = mysqli_query($con, $sql);
-
-     echo "<table border='1'>
-     <th>ID</th> <th>NOME</th> <th>LOGO</th> <th>ATIVO</th> <th colspan='2'>AÇÕES</th>";
-     while($info = mysqli_fetch_array($result)){
-          echo "<tr>
-          <td>".$info['id_marca']."</td>
-          <td>".$info['nome_marca']."</td>
-          <td>".$info['logo_marca']."</td>
-          <td>".$info['ativo']."</td>
-          <td><a href = 'fedit_marca.php?id_marca=". $info[0]."'>Editar</a></td>
-          <td><a href = 'excluir_marca.php?id_marca=". $info[0]."'>Excluir</a></td></tr>
-          ";
-     }
+    if ($resposta) {
+        echo "<table border=1>";
+        echo "<th>Id</th><th>Nome da Marca</th><th>Logo da Marca</th><th colspan=2>Opções</th>";
+        while ($row = mysqli_fetch_array($resposta)) {
+            echo "<tr>";
+            echo "<td>" . $row['id_marca'] . "</td>";
+            echo "<td>" . $row['nome_marca'] . "</td>";
+            echo "<td>" . $row['logo_marca'] . "</td>";
+            echo "<td><a href='fedit_marca.php?id_marca=$row[0]'>Editar</a></td>";
+            echo "<td><a href='excluir_marca.php?id_marca=$row[0]'>Excluir</a></td>";
+            echo "</tr>";
+        }
+        echo "<table>";
+    }
 ?>
