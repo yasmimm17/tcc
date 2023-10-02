@@ -10,12 +10,12 @@
 		<!-- 1ª LINHA -->	
 		<div class="row"> 
 			<div class="form-group col-md-1">
-				<label for="id_fixa">ID</label>
-				<input type="number" class="form-control" name="id_fixa" disabled="disabled" value="0">
+				<label for="id_reserva">ID</label>
+				<input type="number" class="form-control" name="id_reserva" disabled="disabled" value="0">
 			</div>
 			<div class="form-group col-md-2">
 				<label for="horario">Horário</label>
-				<input type="time" class="form-control" name="horario">
+				<input type="datetime-local" class="form-control" name="horario">
 			</div>
 			<div class="form-group col-md-2">
 				<label for="qtde_pessoas">Quantidade de pessoas</label>

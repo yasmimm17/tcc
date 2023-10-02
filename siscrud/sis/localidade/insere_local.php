@@ -5,7 +5,7 @@ $cidade		= $_POST["cidade"];
 $uf		= $_POST["uf"];
 
 $sql = "insert into localidade values ";
-$sql .= "('$cep','$cidade', '$uf');";
+$sql .= "('$cep','$cidade', '$uf', 1);";
 
 $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
 

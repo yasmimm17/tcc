@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `marca_rede` (
   `nome_marca` varchar(45) NOT NULL,
   `logo_marca` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_marca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `reserva_fixa` (
   KEY `id_cli` (`id_cli`),
   CONSTRAINT `reserva_fixa_ibfk_1` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`),
   CONSTRAINT `reserva_fixa_ibfk_2` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   `nome_res` varchar(100) NOT NULL,
   `nr_res` varchar(20) DEFAULT NULL,
   `comp_res` varchar(100) DEFAULT NULL,
-  `tipo_sede_res` char(1) DEFAULT NULL,
+  `tipo_sede_res` tinyint(4) DEFAULT NULL,
   `cep` varchar(10) NOT NULL,
   `id_marca` int(11) NOT NULL,
   `ativo` tinyint(1) DEFAULT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   KEY `id_marca` (`id_marca`),
   CONSTRAINT `restaurante_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`),
   CONSTRAINT `restaurante_ibfk_2` FOREIGN KEY (`id_marca`) REFERENCES `marca_rede` (`id_marca`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `id_cli` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `senha` varchar(15) NOT NULL,
+  `senha` varchar(100) NOT NULL,
   `cep` varchar(10) NOT NULL DEFAULT '',
   `nivel` int(1) DEFAULT NULL,
   `ativo` tinyint(1) DEFAULT NULL,
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `cep` (`cep`),
   KEY `nivel` (`nivel`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 

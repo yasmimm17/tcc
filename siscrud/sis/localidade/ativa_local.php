@@ -1,6 +1,6 @@
 <?php
 if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
-$cep = (int) $_GET['cep'];
+$cep = $_GET['cep'];
 
 $sql = "update localidade set ";
 $sql .= "ativo='1' ";

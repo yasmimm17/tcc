@@ -5,7 +5,7 @@
 <div> <?php include "mensagens.php"; ?> </div>
 <div id="main" class="container-fluid">
 	<h3 class="page-header">Cadastrar Localidade</h3>
-	<form action="?page=insere_usu" method="post">
+	<form action="?page=insere_local" method="post">
 		
 		<div id="linha01" class="row"> 
 			<div class="form-group col-md-3">

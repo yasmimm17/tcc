@@ -1,7 +1,7 @@
 <?php
 	$nivel_necessario = 2;
 	include "base/testa_nivel.php";
-	$cep = (int) $_GET['cep'];
+	$cep = $_GET['cep'];
 	$sql = mysqli_query($con, "select * from localidade where cep = '".$cep."';");
 	$row = mysqli_fetch_array($sql);
 ?>

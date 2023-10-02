@@ -18,7 +18,7 @@
 		<input type="hidden" name="id_reserva" value="<?php echo $row['id_reserva'] ?>">
 		<div class="form-group col-md-2">
 				<label for="horario">Horário</label>
-				<input type="time" class="form-control" name="horario" value="<?php echo $row['horario'] ?>">
+				<input type="datetime-local" class="form-control" name="horario" value="<?php echo $row['horario'] ?>">
 			</div>
 			<div class="form-group col-md-2">
 				<label for="qtde_pessoas">Quantidade de pessoas</label>

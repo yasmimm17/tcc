@@ -33,7 +33,7 @@ if(isset($_GET['msg'])){
 		
 		case 5:
 			echo '	<div class="alert alert-primary alert-dismissible fade show" role="alert">
-						Erro ao acessar a Base de dados! Contate o administrdor!
+						Erro ao acessar a Base de dados! Contate o administrador!
 						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>';
 			break;

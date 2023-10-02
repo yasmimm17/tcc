@@ -5,7 +5,7 @@
 <div id="main" class="container-fluid">
 	<div id="top" class="row">
 		<div class="col-md-10">
-			<h2>Produtos</h2>
+			<h2>Restaurantes</h2>
 		</div>
 
 		<div class="col-md-2">
