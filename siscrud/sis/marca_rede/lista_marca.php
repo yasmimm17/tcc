@@ -10,7 +10,7 @@
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar marcas -->
-			<a href="?page=fcad_marca" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i> Marca</a> 
+			<a href="?page=fcad_marca" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i> Marca</a> 
 		</div>
 	</div>
 	<hr/>

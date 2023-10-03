@@ -10,7 +10,7 @@ include "base/testa_nivel.php";
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar usuários -->
-			<a href="?page=fcad_usu" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i>Usuário</a> 
+			<a href="?page=fcad_usu" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i>Usuário</a> 
 		</div>
 	</div>
 	<div>	<?php include "mensagens.php"; ?>	</div>
@@ -53,7 +53,7 @@ include "base/testa_nivel.php";
 							echo "<td>NÃO</td>";
 						}
 						echo "<td><div class='btn-group btn-group-xs'>";
-						echo "<a class='btn btn-outline-info btn-xs' href=?page=view_usu&id_cli=".$info['id_cli']."> <i class='bx bxs-user-detail'></i> </a>";
+						echo "<a class='btn btn-outline-success btn-xs' href=?page=view_usu&id_cli=".$info['id_cli']."> <i class='bx bxs-user-detail'></i> </a>";
 						echo "<a class='btn btn-outline-warning btn-xs' href=?page=fedit_usu&id_cli=".$info['id_cli']."> <i class='bx bxs-edit-alt'></i> </a>";
 						if($info['ativo'] == 1){
 							echo "<a class='btn btn-outline-danger btn-xs'  href=?page=block_usu&id_cli=".$info['id_cli']."> <i class='bx bx-block'></i> </a>";

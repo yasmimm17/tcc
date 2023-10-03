@@ -10,7 +10,7 @@ include "base/testa_nivel.php";
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar reservas -->
-			<a href="?page=fcad_demand" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i>Reserva</a> 
+			<a href="?page=fcad_demand" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i>Reserva</a> 
 		</div>
 	</div>
 	<hr/>

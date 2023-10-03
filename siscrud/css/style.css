@@ -12,13 +12,13 @@
   left: 0;
   height: 100%;
   width: 260px;
-  background: #184e77;
+  background: #005A09;
   z-index: 100;
   transition: all 0.5s ease;
 }
 
 .card {
- background-color: #34a0a4;
+ background-color: rgb(46, 160, 62);
 
 }
 .sidebar.close{
@@ -67,7 +67,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #168aad;
+  background: #027938;
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;

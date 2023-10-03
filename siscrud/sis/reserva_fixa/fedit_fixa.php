@@ -54,7 +54,7 @@
 	<div id="actions" class="row">
 		<div class="col-md-12">
 			<a href="?page=lista_fixa" class="btn btn-secondary">Voltar</a>
-			<button type="submit" class="btn btn-primary">Salvar Alterações</button>
+			<button type="submit" class="btn btn-success">Salvar Alterações</button>
 		</div>
 	</div>
 </div>

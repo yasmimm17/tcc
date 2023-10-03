@@ -10,7 +10,7 @@
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar tipos de mesa -->
-			<a href="?page=fcad_mesa" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i> Tipo de mesa</a> 
+			<a href="?page=fcad_mesa" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i> Tipo de mesa</a> 
 		</div>
 	</div>
 	<hr/>

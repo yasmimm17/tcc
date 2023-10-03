@@ -59,7 +59,7 @@
 		<hr />
 		<div id="actions" class="row">
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary">Salvar</button>
+				<button type="submit" class="btn btn-success">Salvar</button>
 				<a href="?page=lista_usu" class="btn btn-default">Cancelar</a>
 			</div>
 		</div>

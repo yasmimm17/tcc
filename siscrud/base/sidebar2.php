@@ -1,7 +1,7 @@
 <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Siscrud</span>
+      <span class="logo_name">Keep It</span>
     </div>
     <ul class="nav-links">
       <li>
@@ -12,43 +12,43 @@
       </li>
       <li>
         <a href="?page=lista_local">
-          <i class='bx bxs-book'></i>
+        <i class='bx bx-location-plus'></i>
           <span class="link_name">Localidade</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_marca">
-          <i class='bx bxs-book'></i>
+          <i class='bx bx-bookmark'></i>
           <span class="link_name">Marca da Rede</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_res">
-          <i class='bx bxs-graduation'></i>
+          <i class='bx bx-food-menu'></i>
           <span class="link_name">Restaurante</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_mesa">
-          <i class='bx bxs-book'></i>
+          <i class='bx bx-table'></i>
           <span class="link_name">Tipo de mesa</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_invent">
-          <i class='bx bxs-book'></i>
+          <i class='bx bxs-layer'></i>
           <span class="link_name">Inventário</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_demand">
-          <i class='bx bxs-book'></i>
+          <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva por demanda</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_fixa">
-          <i class='bx bx-cart' ></i>
+          <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva fixa</span>
         </a>
       </li>

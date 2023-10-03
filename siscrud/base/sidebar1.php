@@ -1,7 +1,7 @@
 <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Siscrud</span>
+      <span class="logo_name">Keep It</span>
     </div>
     <ul class="nav-links">
       <li>
@@ -12,13 +12,13 @@
       </li>
       <li>
         <a href="?page=lista_fixa">
-          <i class='bx bxs-book'></i>
+          <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva fixa</span>
         </a>
       </li>
       <li>
         <a href="?page=lista_demand">
-          <i class='bx bxs-book'></i>
+          <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva por demanda</span>
         </a>
       </li>

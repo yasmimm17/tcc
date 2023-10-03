@@ -16,12 +16,10 @@
 
 
 -- Copiando estrutura do banco de dados para keepit
-DROP DATABASE IF EXISTS `keepit`;
 CREATE DATABASE IF NOT EXISTS `keepit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `keepit`;
 
 -- Copiando estrutura para tabela keepit.inventario
-DROP TABLE IF EXISTS `inventario`;
 CREATE TABLE IF NOT EXISTS `inventario` (
   `id_invent` int(11) NOT NULL AUTO_INCREMENT,
   `qtde` int(11) NOT NULL,
@@ -34,10 +32,9 @@ CREATE TABLE IF NOT EXISTS `inventario` (
   CONSTRAINT `inventario_ibfk_2` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.inventario: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.localidade
-DROP TABLE IF EXISTS `localidade`;
 CREATE TABLE IF NOT EXISTS `localidade` (
   `cep` varchar(10) NOT NULL,
   `cidade` varchar(50) NOT NULL,
@@ -46,21 +43,23 @@ CREATE TABLE IF NOT EXISTS `localidade` (
   PRIMARY KEY (`cep`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.localidade: ~1 rows (aproximadamente)
+INSERT INTO `localidade` (`cep`, `cidade`, `uf`, `ativo`) VALUES
+	('12345-678', 'Marechal Hermes', 'RJ', 1);
 
 -- Copiando estrutura para tabela keepit.marca_rede
-DROP TABLE IF EXISTS `marca_rede`;
 CREATE TABLE IF NOT EXISTS `marca_rede` (
   `id_marca` int(11) NOT NULL AUTO_INCREMENT,
   `nome_marca` varchar(45) NOT NULL,
   `logo_marca` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.marca_rede: ~1 rows (aproximadamente)
+INSERT INTO `marca_rede` (`id_marca`, `nome_marca`, `logo_marca`) VALUES
+	(3, 'Outback', 'foto');
 
 -- Copiando estrutura para tabela keepit.reserva_fixa
-DROP TABLE IF EXISTS `reserva_fixa`;
 CREATE TABLE IF NOT EXISTS `reserva_fixa` (
   `id_reserva` int(11) NOT NULL AUTO_INCREMENT,
   `horario` datetime NOT NULL,
@@ -77,10 +76,9 @@ CREATE TABLE IF NOT EXISTS `reserva_fixa` (
   CONSTRAINT `reserva_fixa_ibfk_2` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.reserva_fixa: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.reserva_ondemand
-DROP TABLE IF EXISTS `reserva_ondemand`;
 CREATE TABLE IF NOT EXISTS `reserva_ondemand` (
   `idreserva_ondemand` int(11) NOT NULL AUTO_INCREMENT,
   `qtde_pessoas` int(11) NOT NULL,
@@ -95,10 +93,9 @@ CREATE TABLE IF NOT EXISTS `reserva_ondemand` (
   CONSTRAINT `reserva_ondemand_ibfk_2` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.reserva_ondemand: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.restaurante
-DROP TABLE IF EXISTS `restaurante`;
 CREATE TABLE IF NOT EXISTS `restaurante` (
   `id_res` int(11) NOT NULL AUTO_INCREMENT,
   `nome_res` varchar(100) NOT NULL,
@@ -113,22 +110,22 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   KEY `id_marca` (`id_marca`),
   CONSTRAINT `restaurante_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`),
   CONSTRAINT `restaurante_ibfk_2` FOREIGN KEY (`id_marca`) REFERENCES `marca_rede` (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.restaurante: ~0 rows (aproximadamente)
+INSERT INTO `restaurante` (`id_res`, `nome_res`, `nr_res`, `comp_res`, `tipo_sede_res`, `cep`, `id_marca`, `ativo`) VALUES
+	(2, 'Outback Bangu Shopping', '321', 'Próximo à saída do shopping', 0, '12345-678', 3, 1);
 
 -- Copiando estrutura para tabela keepit.tipo_mesa
-DROP TABLE IF EXISTS `tipo_mesa`;
 CREATE TABLE IF NOT EXISTS `tipo_mesa` (
   `id_mesa` int(11) NOT NULL AUTO_INCREMENT,
   `lugares_mesa` int(11) NOT NULL,
   PRIMARY KEY (`id_mesa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.tipo_mesa: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.usuario
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id_cli` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
@@ -141,9 +138,11 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `cep` (`cep`),
   KEY `nivel` (`nivel`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela keepit.usuario: ~1 rows (aproximadamente)
+INSERT INTO `usuario` (`id_cli`, `nome`, `email`, `senha`, `cep`, `nivel`, `ativo`) VALUES
+	(12, 'Yasmim', 'yas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '12345-678', 3, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

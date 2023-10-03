@@ -10,7 +10,7 @@
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar reservas -->
-			<a href="?page=fcad_fixa" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i> Reserva
+			<a href="?page=fcad_fixa" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i> Reserva
 			
 			</a> 
 		</div>

@@ -10,7 +10,7 @@
 
 		<div class="col-md-2">
 			<!-- Chama o Formulário para adicionar inventário -->
-			<a href="?page=fcad_invent" class="btn btn-primary pull-right h2"><i class='bx bx-plus-medical'></i> Inventário</a> 
+			<a href="?page=fcad_invent" class="btn btn-success pull-right h2"><i class='bx bx-plus-medical'></i> Inventário</a> 
 		</div>
 	</div>
 	<hr/>
