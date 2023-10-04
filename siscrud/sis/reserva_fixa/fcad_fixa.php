@@ -27,7 +27,7 @@
 			</div>
 			<div class="form-group col-md-2">
 				<label for="cel_contato">Celular para contato</label>
-				<input type="text" class="form-control" name="cel_contato" placeholder="(xx) xxxxx-xxxx">
+				<input type="text" class="form-control" name="cel_contato" onkeypress="mascara_tel(this)" onkeydown="return somente_numero(event)" maxlength="14" placeholder="(xx) xxxxx-xxxx">
 			</div>
 		</div>
 		<!-- 2ª LINHA -->
@@ -54,3 +54,20 @@
 		</div>
 	</form> 
 </div>
+
+<script>
+	function mascara_tel(obj) {
+    if(obj.value.length == 0) {
+        obj.value += "("
+    }
+    if(obj.value.length == 3) {
+        obj.value += ")"
+    }
+    if(obj.value.length == 4) {
+        obj.value += " "
+    }
+    if(obj.value.length == 9) {
+        obj.value += "-"
+    }
+}
+</script>

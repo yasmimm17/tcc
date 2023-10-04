@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-<header class="cad">
+    <header class="cad">
         <nav>
             <img src="../../img/Keep It.png">
         </nav>
@@ -29,6 +29,12 @@
                     <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
                     <img src="../../img/nome.png">
                 </div>
+
+                <select class="form-control" name="nivel" id="nivel">
+					<option value="1" >Cliente</option>
+					<option disabled value="2">Adm Restaurante</option>
+					<option disabled value="3">Adm Geral</option>		
+				</select>
 
                 <div class="inputgroup">
                     <input type="email" maxlength="30" name="email" id="email" placeholder="Email">

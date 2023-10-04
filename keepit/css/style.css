@@ -161,10 +161,11 @@ main.cadastro form {
     gap: 10px;
 }
 
-main.cadastro input { 
+main.cadastro input, main.cadastro select { 
     border: none;
     color: white;
 }
+
 main.cadastro input::placeholder {
     color: white;
 }
@@ -173,13 +174,18 @@ main.cadastro input:focus {
     outline: none;
 }
 
-main.cadastro .inputgroup input {
+main.cadastro .inputgroup input, main.cadastro select {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px 10px 5px 40px;
     width: 100%;
 }
-main.cadastro .inputgroup {
+
+main.cadastro select{
+    width: 80%;
+}
+
+main.cadastro .inputgroup, main.cadastro select {
     position: relative;
 }
 
@@ -221,21 +227,8 @@ main.reserva{
     padding-top: 10em;
 }
 
-main.reserva h1{
-    font-weight: 900;
-    color: #005A09;
-}
-
-main.reserva h3{
-    font-weight: bolder;
-}
-
-#verde{
-    color: #005A09;
-}
-
-main.reserva a{
-    color: #005A09;
+main.dados{
+    
 }
 
 #user{
@@ -262,6 +255,7 @@ main.reserva a{
     background-color: rgb(153, 24, 24);
     font-weight: bold;
     width: 10em;
+    align-items: center;
 }
 
 .text-content h1{
@@ -342,9 +336,10 @@ main.reserva a{
 }
 
 input[type="search"]{
+    padding: 0.3em;
     border: none;
     border-radius: 2em;
-    background-color: #cacaca;
+    background-color: #E0E0E0;
 }
 
 .header-home{
@@ -356,9 +351,14 @@ input[type="search"]{
     margin-left: -2em;
 }
 
+.dados h3{
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
 .inputgroup input {
     border-radius: 20px;
-    background-color: #C2C2C2;
+    background-color: #E0E0E0;
     padding: 5px 10px 5px 40px;
     width: 100%;
     
@@ -438,4 +438,14 @@ input[type="search"]{
     }
 }
 
+#quad{
+    margin-left: 3em;
+}
+
+.home1 div:has(div),
+.home2 div:has(div){
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
 
