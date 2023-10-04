@@ -41,6 +41,12 @@
         </a>
       </li>
       <li>
+        <a href="?page=lista_usu">
+          <i class='bx bxs-user'></i>
+          <span class="link_name">Usuário</span>
+        </a>
+      </li>
+      <li>
         <a href="?page=lista_demand">
           <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva por demanda</span>
@@ -50,12 +56,6 @@
         <a href="?page=lista_fixa">
           <i class='bx bx-clipboard'></i>
           <span class="link_name">Reserva fixa</span>
-        </a>
-      </li>
-      <li>
-        <a href="?page=lista_usu">
-          <i class='bx bxs-user'></i>
-          <span class="link_name">Usuário</span>
         </a>
       </li>
       <li>

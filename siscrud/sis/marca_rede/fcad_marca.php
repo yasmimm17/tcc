@@ -18,16 +18,14 @@ include "base/testa_nivel.php";
 				<label for="nome_marca">Nome da Marca</label>
 				<input type="text" class="form-control" name="nome_marca" maxlength="60">
 			</div>
-			<div class="personal-image col-md-3">
-                <label for="logo_marca" class="label">Logo da Marca
-                    <input type="file" name="logo_marca" id="img-input"/>
-                    <figure class="personal-figure">
-                        <img id="preview" src="img/foto-perfil.png" class="personal-avatar" alt="avatar">
-                        <figcaption class="personal-figcaption">
-                            <img src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png">
-                        </figcaption>
-                    </figure>
-                </label>
+			<div class="col-md-3">
+                <label for="logo_marca">Logo da Marca
+					<label for="picture__input" class="picture" tabIndex="0">
+						<span class="picture__image"></span>
+					</label>
+				</label>
+
+				<input type="file" accept="image/*" name="logo_marca" id="picture__input"/>
             </div>
 		</div>
 		<hr />
@@ -39,3 +37,35 @@ include "base/testa_nivel.php";
 		</div>
 	</form> 
 </div>
+
+<script>
+	const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "";
+pictureImage.innerHTML = pictureImageTxt;
+
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
+
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
+
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
+    });
+
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+  }
+});
+
+</script>

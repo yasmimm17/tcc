@@ -40,17 +40,6 @@
                     <img src="../../img/senha.png">
                 </div>
 
-                <button type="button" onclick="openmodal()" class="open__modal">Localidade</button>
-
-                <div class="modal__container">
-                    <div class="modal__content">
-                        <span onclick="closemodal()" class="close__modal">x</span>
-                        <input type="text" name="cep" id="cep" placeholder="Cep" >
-                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" >
-                        <input type="text" name="uf" id="uf" placeholder="UF" >
-                    </div>
-                </div>
-
                 <input type="submit" class="btn btn-primary" value="Cadastrar">
                     
                 <p>Já tem uma conta? <a href="login.html">Entrar</a></p>

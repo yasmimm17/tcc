@@ -6,6 +6,7 @@
 	$sql = mysqli_query($con, "select * from marca_rede where id_marca = '".$id_marca."';");
 	$row = mysqli_fetch_array($sql);
 ?>
+<link rel="stylesheet" href="css/style2.css">
 <div id="main" class="container-fluid">
 	<br><h3 class="page-header">Editar registro da Marca - <?php echo $id_marca;?></h3>
 
@@ -20,17 +21,15 @@
 			<label for="nome_marca">Nome da Marca</label>
 			<input type="text" class="form-control" name="nome_marca" maxlength="60" value="<?php echo $row['nome_marca'] ?>">
 		</div>
-		<div class="personal-image col-md-3">
-                <label for="logo_marca" class="label">Logo da Marca
-                    <input type="file" name="logo_marca" id="img-input" value="<?php echo $row['logo_marca'] ?>"/>
-                    <figure class="personal-figure">
-                        <img id="preview" src="img/foto-perfil.png" class="personal-avatar" alt="avatar">
-                        <figcaption class="personal-figcaption">
-                            <img src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png">
-                        </figcaption>
-                    </figure>
-                </label>
-            </div>
+		<div class="col-md-3">
+			<label for="logo_marca">Logo da Marca
+				<label for="picture__input" class="picture" tabIndex="0">
+					<span class="picture__image"></span>
+				</label>
+			</label>
+
+			<input type="file" accept="image/*" name="picture__input" id="picture__input" value="<?php echo $row['logo_marca'] ?>"/>
+        </div>
 	</div>
 
 	<hr/>
@@ -42,3 +41,35 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	const inputFile = document.querySelector("#picture__input");
+const pictureImage = document.querySelector(".picture__image");
+const pictureImageTxt = "";
+pictureImage.innerHTML = pictureImageTxt;
+
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
+
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
+
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
+    });
+
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+  }
+});
+
+</script>

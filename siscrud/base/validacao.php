@@ -10,7 +10,7 @@ $usuario = mysqli_real_escape_string($con, $_POST['email']);
 $senha = mysqli_real_escape_string($con, $_POST['senha']);
 
 // Validação do email/senha digitados
-$sql  = "select id_cli, email, nome, cep, nivel from usuario where (email = '". $usuario ."') ";
+$sql  = "select id_cli, email, nome, nivel from usuario where (email = '". $usuario ."') ";
 $sql .= "and (senha = '". sha1($senha) ."') and (ativo = 1) limit 1";
 
 //echo $sql; exit;

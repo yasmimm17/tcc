@@ -38,11 +38,6 @@
 	
 	<div class="row">
 
-		<div class="col-md-3">
-			<p><strong>Cep</strong></p>
-			<p><?php echo $row['cep']; ?></p>
-		</div>
-
 		<div class="col-md-2">
 			<p><strong>Nível</strong></p>
 			<p><?php switch($row['nivel'])

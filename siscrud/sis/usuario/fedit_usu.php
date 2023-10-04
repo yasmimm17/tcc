@@ -40,11 +40,6 @@
 
 	<div class="row">
 
-		<div class="form-group col-md-3">
-			<label for="cep">Cep</label>
-			<input type="text" class="form-control" name="cep" value="<?php echo $row["cep"]; ?>">
-		</div>
-
 		<div class="form-group col-md-2">
 			<label for="nivel">Nível</label>
 			<select class="form-control" id="nivel" name="nivel">

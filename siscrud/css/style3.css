@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logo{
+    width: 10em;
+}
+
+.row {
+    margin-right: 0!important; 
+    margin-left: 0!important;
+}
+
+li{list-style: none;}
+.active{color: #005A09;cursor: default;text-decoration: underline;}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 20px 40px;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+header nav a{
+    margin: auto 20px auto 40px;
+    color: #000000;
+    text-decoration: none; 
+    transition: .2s;
+}
+
+header nav a:hover, header nav a button:hover{
+    color: #005A09;
+    text-decoration: underline;
+}
+
+header nav a button{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+dialog{
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0.5em;
+    border-radius: 0.5em;
+    width: auto;
+    font-weight: bold;
+    position: absolute;
+}
+
+dialog a{
+    padding-left: -3em;
+    margin-bottom: -0.1em;
+}
+
+dialog button{
+    margin-left: 1em;
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    color: rgb(158, 37, 37);
+}
+
+#barra{
+    width: 30em;
+    border-radius: 5em;
+    border-color: #000000;
+    position: relative;
+    left: 23%;
+    margin-left: 10em;
+}
+
+.p-3 img{
+    float: left;
+    margin-bottom: 5em;
+    padding-right: 1em;
+}
+
+.p-3{
+    text-align: start;
+}
+
+div a{
+    text-decoration: none;
+    color: #000000;
+}
+
+p.p-5{
+    font-weight: bold;
+}
+
+header.cad {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+main.cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+div.cad {
+    background-color: #005A09;
+    width: 90vh;
+    height: 90vh;
+    border-radius: 50%;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+div.ola {
+    color: white;
+    text-align: center;
+}
+div.ola h2 {
+    font-weight: 900;
+}
+
+main.cadastro form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+main.cadastro input { 
+    border: none;
+    color: white;
+}
+main.cadastro input::placeholder {
+    color: white;
+}
+
+main.cadastro input:focus {
+    outline: none;
+}
+
+main.cadastro .inputgroup input {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px 5px 40px;
+    width: 100%;
+}
+main.cadastro .inputgroup {
+    position: relative;
+}
+
+main.cadastro .inputgroup img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+input[type="submit"] {
+    color: #005A09!important;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-size: 1 rem;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+div.cad form a{
+    text-decoration: underline;
+}
+
+main.cadastro p {
+    color: white;
+    font-size: .9rem;
+    width: 20em;
+    text-align: center;
+}
+
+main.cadastro a {
+    font-weight: bold;
+    color: white;
+}
+
+main.reserva{
+    text-align: center;
+    padding-top: 10em;
+}
+
+main.reserva h1{
+    font-weight: 900;
+    color: #005A09;
+}
+
+main.reserva h3{
+    font-weight: bolder;
+}
+
+#verde{
+    color: #005A09;
+}
+
+main.reserva a{
+    color: #005A09;
+}
+
+#user{
+    height: 10em;
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info{
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+.info input{
+    border: none;
+}
+
+.info button{
+    margin-top: 2em;
+    border-radius: 3em;
+    border: none;
+    padding: 0.5em;
+    color: white;
+    background-color: rgb(153, 24, 24);
+    font-weight: bold;
+    width: 10em;
+}
+
+.text-content h1{
+    font-size: 5em;
+    font-weight: 900;
+    color: #005A09;
+}
+
+.text-content button, .text-content2 button{
+    border: 2px solid #047e10;
+    color: #047e10;
+    background-color: #ffffff;
+    width: 8em;
+    height: 2em;
+    font-weight: bold;
+}
+
+.text-content button{
+    margin-left: 8em;
+}
+
+.text-content button :hover{
+    background-color: #000000;
+}
+
+.apresentacao{
+    padding: 10em;
+}
+
+.apresentacao h1{
+    margin-left: 1.6em;
+}
+
+.apresentacao h3{
+    margin-left: 4.6em;
+    width: 20em;
+}
+
+.text-content img{
+    width: 25em;
+    padding-top: 5em;
+    margin-left: 4em;
+}
+
+.container-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content2{
+    padding: 2em;
+    border: solid rgb(167, 167, 167);
+    width: 77em;
+    border-radius: 3em;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 5em;
+}
+
+.text-content2 h4{
+    padding-top: 1em;
+    padding-left: 2em;
+    width: 20em;
+}
+
+.text-content2 h1{
+    width: 10em;
+    margin: auto;
+    display: block;
+}
+
+.text-content2 button{
+    margin: auto;
+    display: block;
+    margin-top: 2em;
+}
+
+input[type="search"]{
+    border: none;
+    border-radius: 2em;
+    background-color: #cacaca;
+}
+
+.header-home{
+    padding-bottom: 5em;
+}
+
+#header-img{
+    width: 1.5em;
+    margin-left: -2em;
+}
+
+.inputgroup input {
+    border-radius: 20px;
+    background-color: #C2C2C2;
+    padding: 5px 10px 5px 40px;
+    width: 100%;
+    
+}
+.inputgroup {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.inputgroup img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+
+.open__modal {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    width: 70%;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.modal__container {
+    position: fixed;
+    visibility: hidden;
+    display: grid;
+    opacity: 0;
+    place-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0000002a;
+    backdrop-filter: blur(2px);
+    transition: opacity .3s;
+}
+
+.modal__content {
+    position: relative;
+    width: 400px;
+    height: auto;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px 10px;     
+}
+
+.modal__content input {
+    border-radius: 50px;
+    margin-bottom: 1em;
+    background-color: #909090;
+    text-align: center;
+}
+
+.close__modal {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 500;
+    top: -40px;
+    right: -20px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+

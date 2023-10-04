@@ -31,10 +31,6 @@
 		</div>
 
 		<div id="linha02" class="row">
-			<div class="form-group col-md-3">
-				<label for="usuario">Cep</label>
-				<input type="text" class="form-control" name="cep">
-			</div>
 			
 			<div class="form-group col-md-2">
 				<label for="nivel">Nível</label>

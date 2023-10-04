@@ -3,11 +3,10 @@ if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?
 $nome		= $_POST["nome"];
 $email		= $_POST["email"];
 $senha			= $_POST["senha"];
-$cep		= $_POST["cep"];
 $nivel			= $_POST["nivel"];
 
 $sql = "insert into usuario values ";
-$sql .= "('0','$nome', '$email', '".sha1($senha)."', '$cep','$nivel','1');";
+$sql .= "('0','$nome', '$email', '".sha1($senha)."', '$nivel','1');";
 
 $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
 

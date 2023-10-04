@@ -33,7 +33,6 @@ include "base/testa_nivel.php";
 					echo "<td><strong>Nome</strong></td>";
 					echo "<td><strong>Email</strong></td>";
 					echo "<td><strong>Senha</strong></td>";
-					echo "<td><strong>Cep</strong></td>";
 					echo "<td><strong>Nível</strong></td>";
 					echo "<td><strong>Ativo</strong></td>";
 					echo "<td class='actions'><strong>Ações</strong></td>"; 
@@ -45,7 +44,6 @@ include "base/testa_nivel.php";
 						echo "<td>".$info['nome']."</td>";
 						echo "<td>".$info['email']."</td>";
 						echo "<td>".$info['senha']."</td>";
-						echo "<td>".$info['cep']."</td>";
 						echo "<td>".$info['nivel']."</td>";
 						if($info['ativo'] == 1){
 							echo "<td>SIM</td>";

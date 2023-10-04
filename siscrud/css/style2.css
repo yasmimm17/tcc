@@ -1,46 +1,22 @@
-.personal-image {
-    text-align: center;
-    align-items: center;
-    margin: auto;
-}
-.personal-image input[type="file"] {
+#picture__input{
     display: none;
 }
-.personal-figure {
-    position: relative;
-    width: 100px;
-    height: 100px;
+
+.picture{
+    border: 2px dashed #aaa;
+    width: 8em;
+    height: 8em;
+    background-color: #eee;
+    display: block;
+    cursor: pointer;
+    transition: background 300ms ease-in-out;
 }
-.personal-avatar {
-    cursor: pointer;
-    width: inherit;
-    height: inherit;
-    box-sizing: border-box;
-    border-radius: 100%;
-    border: 2px solid transparent;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
-    transition: all ease-in-out .3s;
-  }
-  .personal-avatar:hover {
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  }
-  .personal-figcaption {
-    cursor: pointer;
-    position: absolute;
-    top: 0px;
-    width: inherit;
-    height: inherit;
-    border-radius: 100%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0);
-    transition: all ease-in-out .3s;
-  }
-  .personal-figcaption:hover {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, .5);
-  }
-  .personal-figcaption > img {
-    margin-top: 32.5px;
-    width: 40px;
-    height: 40px;
-  }
+
+.picture:hover{
+    background-color: #ddd;
+}
+
+.picture__img{
+    max-width: 100%;
+}
+
