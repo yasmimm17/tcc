@@ -31,12 +31,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `ativo` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_cli`),
   KEY `nivel` (`nivel`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.usuario: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela keepit.usuario: ~3 rows (aproximadamente)
 INSERT INTO `usuario` (`id_cli`, `nome`, `email`, `senha`, `nivel`, `ativo`) VALUES
 	(12, 'Yasmim', 'yas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 3, 1),
-	(14, 'Raimunda', 'rai@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1);
+	(14, 'Claudinei Inacio Barbosa', 'barbosaclaudinei47@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
+	(15, 'Raimunda da Lima', 'raimunda@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

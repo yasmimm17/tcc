@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +11,7 @@
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- css  -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style3.css">
 </head>
 <body>
     <header class="cad">
@@ -24,15 +26,15 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_cli.php" method="post">
+            <form action="?page=insere_usu" method="post">
                 <div style="position: relative; top: 4em;">
                     <div class="inputgroup">
                         <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
                         <img src="../../img/nome.png">
                     </div>
                     <div class="inputgroup">
-                        <select class="form-control" name="nivel" id="nivel">
-                            <option value="1" >Cliente</option>
+                        <select class="form-control" name="nivel" id="nivel" placeholder="Nível">
+                            <option checked value="1" >Cliente</option>
                             <option disabled value="2">Adm Restaurante</option>
                             <option disabled value="3">Adm Geral</option>
                         </select>
@@ -49,7 +51,7 @@
                 </div>
 
                 <div class="form-group col-md-2" style="color: transparent;">
-                    <label for="ativo">Ativo</label><br>
+                    <label for="ativo" name="ativo">Ativo</label><br>
                     <label class="radio-inline">
                         <input type="radio" name="optativo" checked disabled>Sim
                     </label>
@@ -58,9 +60,9 @@
                     </label>
 			    </div>
 
-                <input type="submit" class="btn btn-primary" value="Cadastrar" style="position: relative; top: -5em;">
+                <div id="actions"><input type="submit" class="btn btn-primary" value="Cadastrar" style="position: relative; top: -5em;"></div>
                     
-                <p style="position: relative; top: -5em;">Já tem uma conta? <a href="login.html">Entrar</a></p>
+                <p style="position: relative; top: -5em;">Já tem uma conta? <a href="../../base/login.php">Entrar</a></p>
             </form>
             
         </div>

@@ -158,7 +158,7 @@ main.cadastro form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 main.cadastro input, main.cadastro select { 
@@ -182,10 +182,10 @@ main.cadastro .inputgroup input, main.cadastro select {
 }
 
 main.cadastro select{
-    width: 80%;
+    width: 15em;
 }
 
-main.cadastro .inputgroup, main.cadastro select {
+main.cadastro .inputgroup {
     position: relative;
 }
 

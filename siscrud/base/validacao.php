@@ -1,7 +1,7 @@
 <?php
 // Verifica se houve POST e se o email ou a senha estão vazios
 if (!empty($_POST) and (empty($_POST['email']) or empty($_POST['senha']))) {
-	header("Location: login.html"); exit;
+	header("Location: login.php"); exit;
 }
 // Tenta se conectar ao servidor MySQL e ao DB
 include "config.php";

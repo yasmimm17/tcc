@@ -37,14 +37,14 @@
                 </div>
 
                 <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-start mb-4">
+                <div class="form-check d-flex justify-content-start mb-4" id="checkbox">
                     <input class="form-check-input" type="checkbox" value="" id="checkbox" onclick="mostrar()" />
-                    <label class="form-check-label" for="checkbox" style="color: white"> Mostrar Senha </label>
+                    <label class="form-check-label" for="checkbox" style="color: white; margin-left: 0.5em;"> Mostrar Senha </label>
                 </div>
 
                 <input type="submit" value="Entrar">
             
-                <p>Não tem uma conta? <a href="sis/cliente/fcad_cli.php">Cadastre-se</a></p>
+                <p style="width: 18em;">Não tem uma conta? <a href="../sis/usuario/cadastro_usu.php">Cadastre-se</a></p>
             </form>
         </div>
     </main>
