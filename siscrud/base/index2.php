@@ -7,13 +7,13 @@
   <title>Keep It</title>
 
   <!-- css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style3.css">
   <!--bootstrap css-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-2">
         <!-- Container wrapper -->
         <div class="container-fluid">
@@ -23,7 +23,7 @@
             <!-- Navbar brand -->
             <a class="navbar-brand mt-2 mt-lg-0" href="#">
             <img
-                src="img/Keep It.png"
+                src="../img/Keep It.png"
                 height="20"
                 loading="lazy"
             />
@@ -43,8 +43,8 @@
         <!-- Right elements -->
         <div class="d-flex align-items-center">
             <!-- Buttons -->
-            <button type="button" id="criar"><a style="color: #005A09;" href="">Criar conta</a></button>
-            <button type="button" id="logar"><a style="color: white;" href="">Entrar</a></button>
+            <button type="button" id="criar"><a style="color: #005A09;" href="../sis/usuario/cadastro_usu.php">Criar conta</a></button>
+            <button type="button" id="logar"><a style="color: white;" href="login.php">Entrar</a></button>
         <!-- Right elements -->
         </div>
         <!-- Container wrapper -->
@@ -59,13 +59,13 @@
             </div>
 
             <div class="col-md-6">
-                <img src="img/home.png">
+                <img src="../img/home.png">
             </div>
         </div>
 
         <div class="text-content2" id="text-content2">
             <div class="col-md-6">
-                <img src="img/seta.png">
+                <img src="../img/seta.png">
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lorem commodo, fringilla magna sed, bibendum dolor. Ut feugiat ipsum eu metus semper.</h4>
             </div>
 

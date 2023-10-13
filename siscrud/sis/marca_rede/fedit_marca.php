@@ -12,7 +12,7 @@
 
 	<!-- Área de campos do formulário de edição-->
 
-	<form action="?page=atualiza_marca&id_marca=<?php echo $row['id_marca']; ?>" method="post">
+	<form action="?page=atualiza_marca&id_marca=<?php echo $row['id_marca']; ?>" method="post" enctype="multipart/form-data">
 
 	<!-- 1ª LINHA -->	
 	<div class="row"> 

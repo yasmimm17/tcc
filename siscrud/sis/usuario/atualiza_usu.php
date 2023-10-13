@@ -4,9 +4,10 @@ $id_cli		  		= $_POST["id_cli"];
 $nome		= $_POST["nome"];
 $email		= $_POST["email"];
 $nivel			= $_POST["nivel"];
+$foto			= $_POST["foto"];
 
 $sql = "update usuario set ";
-$sql .= "nome='$nome', email='$email', nivel='$nivel' ";
+$sql .= "nome='$nome', email='$email', nivel='$nivel', foto='$foto' ";
 $sql .= "where id_cli = '$id_cli';";
 
 $resultado = mysqli_query($con, $sql)or die(mysqli_error());

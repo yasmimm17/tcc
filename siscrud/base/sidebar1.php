@@ -1,6 +1,6 @@
 <div class="sidebar close">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
+      <i class='bx bx-menu'></i>
       <span class="logo_name">Keep It</span>
     </div>
     <ul class="nav-links">

@@ -19,6 +19,7 @@
             <img src="../../img/Keep It.png">
         </nav>
     </header>
+
     <main class="cadastro">
         <div class="cad">
             <div class="ola" style="position: relative; top: 4em;">
@@ -26,7 +27,7 @@
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="?page=insere_usu" method="post">
+            <form action="insere_usu.php" method="post">
                 <div style="position: relative; top: 4em;">
                     <div class="inputgroup">
                         <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
