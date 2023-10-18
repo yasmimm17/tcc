@@ -36,31 +36,12 @@
                     <img src="../img/senha.png">
                 </div>
 
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-start mb-4" id="checkbox">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox" onclick="mostrar()" />
-                    <label class="form-check-label" for="checkbox" style="color: white; margin-left: 0.5em;"> Mostrar Senha </label>
-                </div>
-
                 <input type="submit" value="Entrar">
             
                 <p style="width: 18em;">Não tem uma conta? <a href="../sis/usuario/cadastro_usu.php">Cadastre-se</a></p>
             </form>
         </div>
     </main>
-
-    <script>
-      function mostrar() {
-          let senha = document.getElementById("senha");
-          let checkbox = document.getElementById("checkbox");
-          if (checkbox.checked) {
-              senha.type = "text"
-          }
-          else {
-              senha.type = "password"
-          }
-      }
-    </script>
 
     <!--bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

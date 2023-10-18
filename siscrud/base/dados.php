@@ -1,9 +1,6 @@
 <?php
     include "config.php";
-
-    //Iniciar sessão
-    session_start();
-
+  
     //Verfica se o id do usuário está definido na sessão
     if(isset($_SESSION["UsuarioID"])) {
         $usuario_id = $_SESSION["UsuarioID"];
@@ -55,8 +52,8 @@
       <nav class="nav-home col-md-6">
           <input type="search" placeholder="Pesquisar">
           <img src="../img/search.png" id="header-img">
-          <img src="../img/reserva.png" id="header-img">
-          <img src="../img/perfil.png" id="header-img">
+          <a href="reserva-nao.php"><img src="../img/reserva.png" id="header-img"></a>
+          <a href="dados.php"><img src="../img/perfil.png" id="header-img"></a>
       </nav>
     </header>
 
@@ -66,19 +63,19 @@
             <div class="col-md-2">
               <img id="user" src="../img/home-perfil.png">
             </div>
-            <div class="col-md-3">
-              <h3 style="font-weight: bold;">Olá, <?php echo'' .$nome. '';?>!</h3>
+            <div class="col-md-4">
+              <h3 style="font-weight: bold;">Olá, <?php echo'' .$nome. '';?>!<img src="../img/editar.png"></h3>
             </div>
           </div>
           <div class="info">
               <div class="row">
-                  <div class="col-2">
+                  <div class="col-3">
                     <div class="inputgroup">
                       <input type="text" maxlength="60" name="nome" id="nome" <?php echo'value="' .$nome. '"';?>>
                       <img src="../img/perfil-verde.png">
                     </div>
                   </div>
-                  <div class="col-2">
+                  <div class="col-3">
                     <div class="inputgroup">
                       <input type="text" maxlength="60" name="senha" id="senha" <?php echo'value="' .$senha. '"';?>>
                       <img src="../img/senha-verde.png">
@@ -86,21 +83,20 @@
                   </div>
               </div>
               <div class="row">
-                <div class="col-2">
+                <div class="col-3">
                   <div class="inputgroup">
                     <input type="text" maxlength="60" name="email" id="email" <?php echo'value="' .$email. '"';?>>
-                    <img src="../img/perfil-verde.png">
+                    <img src="../img/email-verde.png">
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                   <div class="inputgroup">
                     <input type="text" name="nivel" id="nivel" <?php echo'value="' .$nivel. '"';?>>
-                    <img src="../img/perfil-verde.png">
+                    <img src="../img/nivel-verde.png">
                   </div>
                 </div>
               </div>
               <div class="row" style="width: 20em; text-align: center;">
-                <div class="col-md-6"><a href="#"><button>Desativar conta</button></a></div>
                 <div class="col-md-3"><a href="logout.php"><button>Sair</button></a></div>
               </div>
           </div>

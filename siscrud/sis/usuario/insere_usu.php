@@ -4,10 +4,9 @@ $nome		= $_POST["nome"];
 $email		= $_POST["email"];
 $senha			= $_POST["senha"];
 $nivel			= $_POST["nivel"];
-$foto			= $_POST["foto"];
 
-//$sql = "insert into usuario values ";
-$sql .= "('0','$nome', '$email', '".sha1($senha)."', '$nivel', '$foto', '1');";
+$sql = "insert into usuario values ";
+$sql .= "('0','$nome', '$email', '".sha1($senha)."', '$nivel', '1');";
 
 $resultado = mysqli_query($con, $sql) or die(mysqli_error($con));
 

@@ -22,13 +22,14 @@
 
     <main class="cadastro">
         <div class="cad">
-            <div class="ola" style="position: relative; top: 4em;">
+            <div> <?php include "mensagens.php"; ?> </div>
+            <div class="ola" style="position: relative;">
                 <h2>Olá!</h2>
                 <h5>Esperamos por você!</h5>
             </div>
 
-            <form action="insere_usu.php" method="post">
-                <div style="position: relative; top: 4em;">
+            <form action="?page=insere_usu" method="post">
+                <div style="position: relative; ">
                     <div class="inputgroup">
                         <input type="text" maxlength="60" name="nome" id="nome" placeholder="Nome">
                         <img src="../../img/nome.png">
@@ -51,19 +52,11 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-2" style="color: transparent;">
-                    <label for="ativo" name="ativo">Ativo</label><br>
-                    <label class="radio-inline">
-                        <input type="radio" name="optativo" checked disabled>Sim
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optativo" disabled>Não
-                    </label>
-			    </div>
-
-                <div id="actions"><input type="submit" class="btn btn-primary" value="Cadastrar" style="position: relative; top: -5em;"></div>
+                <div id="actions">
+                    <input type="submit" class="btn btn-primary" value="Cadastrar" style="position: relative">
+                </div>
                     
-                <p style="position: relative; top: -5em;">Já tem uma conta? <a href="../../base/login.php">Entrar</a></p>
+                <p style="position: relative; ">Já tem uma conta? <a href="../../base/login.php">Entrar</a></p>
             </form>
             
         </div>

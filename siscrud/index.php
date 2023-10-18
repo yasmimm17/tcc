@@ -54,8 +54,8 @@
             //Exibir   
       ?>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item" style="font-weight: bold;">
+        <ul class="navbar-nav" style="margin-left: 80%;">
+          <li class="nav-item" style="font-weight: bold; margin-top: 5%">
             <?php echo'' .$nome. '';?>
           </li>
 

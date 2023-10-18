@@ -261,20 +261,19 @@ main.reserva{
 }
 
 .text-content button, .text-content2 button{
-    border: 2px solid #047e10;
-    color: #047e10;
+    border: 2px solid #005A09;
+    color: #005A09;
     background-color: #ffffff;
     width: 8em;
     height: 2em;
     font-weight: bold;
 }
-
 .text-content button{
     margin-left: 8em;
 }
 
 .text-content button :hover{
-    background-color: #000000;
+    background-color: white;
 }
 
 .apresentacao{
@@ -326,9 +325,14 @@ main.reserva{
 }
 
 .text-content2 button{
+    color:#005A09;
     margin: auto;
     display: block;
     margin-top: 2em;
+}
+
+.text-content2 button :hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 input[type="search"]{
@@ -398,8 +402,3 @@ input[type="search"]{
     padding: 0.5em;
     border: none;
 }
-
-#vmsla :hover{
-    background-color: white!important;
-}
-
