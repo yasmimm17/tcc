@@ -54,8 +54,8 @@
         <div class="row text-content">
             <div class="col-md-6 apresentacao">
                 <h1>Keep It</h1>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lorem commodo, fringilla magna sed, bibendum dolor. Ut feugiat ipsum eu metus semper.</h3>
-                <button>Vamos lá!</button>
+                <h3>Bem-vindo ao nosso site de reservas de mesa em restaurantes, a solução moderna para tornar suas refeições memoráveis desde o primeiro clique!</h3>
+                <button><a href="../sis/usuario/cadastro_usu.php" style="color: #005A09;" id="vmsla">Vamos lá!</a></button>
             </div>
 
             <div class="col-md-6">
@@ -66,7 +66,7 @@
         <div class="text-content2" id="text-content2">
             <div class="col-md-6">
                 <img src="../img/seta.png">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lorem commodo, fringilla magna sed, bibendum dolor. Ut feugiat ipsum eu metus semper.</h4>
+                <h4>Diga adeus às longas esperas por uma mesa! Nosso site intuitivo permite que você navegue pelos melhores restaurantes e escolha a mesa que se adapte ao seu gosto e necessidades.</h4>
             </div>
 
             <div class="col-md-6">
