@@ -71,7 +71,6 @@
 
             <div class="col-md-6">
                 <h1 style="font-size:55px">É dono de um negócio? Cadastre seu restaurante!</h1>
-                <div><button style="font-size:25px">Cadastre-se!</button></div>
             </div>
         </div>
     </div>
