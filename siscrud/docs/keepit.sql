@@ -153,10 +153,10 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Copiando dados para a tabela keepit.usuario: ~6 rows (aproximadamente)
 INSERT INTO `usuario` (`id_cli`, `nome`, `email`, `senha`, `nivel`, `ativo`) VALUES
 	(12, 'Yasmim Almeida Barbosa', 'yas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 3, 1),
-	(14, 'Claudinei Inácio Barbosa', 'barbosaclaudinei47@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
+	(14, 'Cláudio Rodrigues', 'claudio@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
 	(15, 'Raimunda da Lima', 'raimunda@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2, 1),
-	(16, 'Raphaela Lopes e Santos', 'rapa@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
-	(17, 'Bryan Almeida Barbosa', 'bryan@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
+	(16, 'Rayssa Lopes', 'ray@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
+	(17, 'Bruno Coelho', 'bruno@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
 	(18, 'Maria Frambach', 'maria@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
