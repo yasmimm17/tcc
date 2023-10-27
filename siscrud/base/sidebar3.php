@@ -17,9 +17,39 @@
         </a>
       </li>
       <li>
+        <a href="?page=lista_marca">
+          <i class='bx bx-bookmark'></i>
+          <span class="link_name">Marca da Rede</span>
+        </a>
+      </li>
+      <li>
         <a href="?page=lista_res">
           <i class='bx bx-food-menu'></i>
           <span class="link_name">Restaurante</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_mesa">
+          <i class='bx bx-table'></i>
+          <span class="link_name">Tipo de mesa</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_invent">
+          <i class='bx bxs-layer'></i>
+          <span class="link_name">Inventário</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_fixa">
+          <i class='bx bx-clipboard'></i>
+          <span class="link_name">Reserva fixa</span>
+        </a>
+      </li>
+      <li>
+        <a href="?page=lista_demand">
+          <i class='bx bx-clipboard'></i>
+          <span class="link_name">Reserva por demanda</span>
         </a>
       </li>
       <li>
