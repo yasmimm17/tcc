@@ -1,34 +1,63 @@
 <?php
-    // Conexão com o banco de dados
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "keepit";
+    if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $nome_marca        = $_POST["nome_marca"];
+    $logo_marca       = !empty($_FILES['logo_marca']['name']) ? $_FILES['logo_marca']['name'] : "";
 
-    if ($conn->connect_error) {
-        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+    if(!empty($logo_marca)){
+        $caminho = "imagens/uploads/";
+        $logo_marca = uploadImage($caminho);
     }
 
-    // Coleta os dados do formulário
-    $nome_marca = $_POST['nome_marca'];
-    $logo_marca = file_get_contents($_FILES['logo_marca']['tmp_name']);
+    $sql = "insert into marca_rede values ";
+    $sql .= "('0','$nome_marca','$logo_marca');";
 
-    // Prepara e executa a consulta SQL para inserir os dados
-    $sql = "INSERT INTO marca_rede (nome_marca, logo_marca) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $nome_marca, $logo_marca);
-    $stmt->execute();
+    $resultado = mysqli_query($con, $sql)or die(mysqli_error());
 
-    if ($stmt->affected_rows > 0) {
+    if($resultado){
         header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1');
         mysqli_close($con);
-    } else {
+    }else{
         header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=4');
         mysqli_close($con);
     }
 
-    $stmt->close();
-    $conn->close();
+    function uploadImage($caminho){
+        if(!empty($_FILES['logo_marca']['name'])) {
+            $nomeArquivo = $_FILES['logo_marca']['name'];
+            $tipo = $_FILES['logo_marca']['type'];
+            $nomeTemporario = $_FILES['logo_marca']['tmp_name'];
+            $tamanho = $_FILES['logo_marca']['size'];
+            $erros = array();
+
+            $tamanhoMaximo = 1024 * 1024 * 5; //5MB
+            if($tamanho > $tamanhoMaximo){
+                $erros[] = "Seu arquivo excede o tamanho máximo<br>";
+            }
+
+            $arquivosPermitidos = ["png", "jpg", "jpeg"];
+            $extensao = pathinfo($nomeArquivo, PATHINFO_EXTENSION);
+            if(!in_array($extensao, $arquivosPermitidos)){
+                $erros[] = "Arquivo não permitido<br>";
+            }
+
+            $typesPermitidos = ["image/png", "image/jpg", "image/jpeg"];
+            if(!in_array($tipo, $typesPermitidos)){
+                $erros[] = "Tipo de arquivo não permitido<br>";
+            }
+
+            if (!empty($erros)){
+                foreach ($erros as $erro){
+                    echo $erro;
+                }
+            }else{
+                $novoNome = $nomeArquivo;
+                if(move_uploaded_file($nomeTemporario, $caminho.$novoNome)){
+                    echo "Upload feito com sucesso";
+                }else{
+                    echo "Erro";
+                }
+            }
+        }
+    }
 ?>

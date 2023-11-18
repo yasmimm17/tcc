@@ -258,6 +258,6 @@
         }
     }
     else {
-        header("location: index2.php");
+        header("location: base/land.php");
     }
 ?>

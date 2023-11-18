@@ -43,7 +43,7 @@
         <!-- Right elements -->
         <div class="d-flex align-items-center">
             <!-- Buttons -->
-            <button type="button" id="criar"><a style="color: #005A09;" href="../sis/usuario/cadastro_usu.php">Criar conta</a></button>
+            <button type="button" id="criar"><a style="color: #005A09;" href="../cadastro_usu.php">Criar conta</a></button>
             <button type="button" id="logar"><a style="color: white;" href="login.php">Entrar</a></button>
         <!-- Right elements -->
         </div>
@@ -52,10 +52,10 @@
  
     <div class="container-main">
         <div class="row text-content">
-            <div class="col-md-6 apresentacao">
+            <div class="col-md-6 apresentacao" >
                 <h1>Keep It</h1>
                 <h3>Bem-vindo ao nosso site de reservas de mesa em restaurantes, a solução moderna para tornar suas refeições memoráveis desde o primeiro clique!</h3>
-                <button><a href="../sis/usuario/cadastro_usu.php" style="color: #005A09;" id="vmsla">Vamos lá!</a></button>
+                <a href="../cadastro_usu.php"><button>Vamos Lá</button></a>
             </div>
 
             <div class="col-md-6">

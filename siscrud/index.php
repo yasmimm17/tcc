@@ -31,7 +31,7 @@
               $usuario_id = $_SESSION["UsuarioID"];
           } else{
               //Redireciona o usuário para o login se não estiver logado
-              header("location: base/index2.php");
+              header("location: base/login.php");
               exit;
           }
 

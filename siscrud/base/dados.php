@@ -1,6 +1,6 @@
 <?php
     include "config.php";
-  
+    if(!isset($_SESSION)) session_start();
     //Verfica se o id do usuário está definido na sessão
     if(isset($_SESSION["UsuarioID"])) {
         $usuario_id = $_SESSION["UsuarioID"];
@@ -50,8 +50,14 @@
       </div>
 
       <nav class="nav-home col-md-6">
-          <input type="search" placeholder="Pesquisar">
-          <img src="../img/search.png" id="header-img">
+          <div class="search-box">
+              <input type="text" class="search-text" placeholder="Pesquisar">
+              <a class="search-btn">
+                <img class="loupe-black" src="../img/search.png">
+                <img class="loupe-white" src="../img/search-branco.png">
+              </a>
+          </div>
+
           <a href="reserva-nao.php"><img src="../img/reserva.png" id="header-img"></a>
           <a href="dados.php"><img src="../img/perfil.png" id="header-img"></a>
       </nav>
@@ -97,7 +103,7 @@
                 </div>
               </div>
               <div class="row" style="width: 20em; text-align: center;">
-                <div class="col-md-3"><a href="logout.php"><button>Sair</button></a></div>
+                <div class="col-md-7"><a href="logout.php"><button>Sair</button></a></div>
               </div>
           </div>
       </main>
