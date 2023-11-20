@@ -36,7 +36,13 @@ if (mysqli_num_rows($query) != 1) {
 	$_SESSION['UsuarioNivel'] = $resultado['nivel'];
 
 	// Redireciona o visitante
-	header("Location: ../index.php?page=home");
+	if($resultado['nivel'] == 1){
+		header('Location: \GitHub/tcc/siscrud/base/inicio.php');
+		exit();
+	}else{
+		header('Location: \GitHub/tcc/siscrud/index.php?page=home');
+	}
+	
 }
 
 ?>

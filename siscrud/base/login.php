@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-    <header class="cad">
+    <header class="cad" style="padding: 2em">
         <nav>
             <img src="../img/Keep It.png">
         </nav>
@@ -38,7 +38,7 @@
 
                 <input type="submit" value="Entrar">
             
-                <p style="width: 18em;">Não tem uma conta? <a href="../sis/usuario/cadastro_usu.php">Cadastre-se</a></p>
+                <p style="width: 18em;">Não tem uma conta? <a href="../cadastro_usu.php">Cadastre-se</a></p>
             </form>
         </div>
     </main>

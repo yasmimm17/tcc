@@ -35,9 +35,8 @@
 				echo "<td><strong>Quantidade de pessoas</strong></td>"; 
 				echo "<td><strong>Observação</strong></td>";
 				echo "<td><strong>Celular para contato</strong></td>";
-                    echo "<td><strong>Situação da reserva</strong></td>";
-                    echo "<td><strong>ID do Restaurante</strong></td>";
-                    echo "<td><strong>ID do Cliente</strong></td>";
+                echo "<td><strong>ID do Restaurante</strong></td>";
+                echo "<td><strong>ID do Cliente</strong></td>";
 				echo "<td class='actions justify-content-center'><strong>Ações</strong></td>"; 
 				echo "</tr></thead><tbody>";
 				while($info = mysqli_fetch_array($data)){ 
@@ -47,9 +46,8 @@
 					echo "<td>".$info['qtde_pessoas']."</td>";
 					echo "<td>".$info['obs']." </td>";
 					echo "<td>".$info['cel_contato']."</td>";
-                         echo "<td>".$info['situacao_reserva']."</td>";
-                         echo "<td>".$info['id_res']."</td>";
-                         echo "<td>".$info['id_cli']."</td>";
+                    echo "<td>".$info['id_res']."</td>";
+                    echo "<td>".$info['id_cli']."</td>";
 					echo "<td class='actions btn-group btn-group-sm d-flex justify-content-center'>";
 					echo "<a class='btn btn-outline-success btn-xs' href=?page=view_fixa&id_reserva=".$info['id_reserva']."> <i class='bx bxs-binoculars'></i> </a>";
 					echo "<a class='btn btn-outline-warning btn-xs' href=?page=fedit_fixa&id_reserva=".$info['id_reserva']."> <i class='bx bxs-edit-alt'></i> </a>"; 

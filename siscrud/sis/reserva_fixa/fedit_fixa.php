@@ -36,18 +36,14 @@
 
 	<!-- 2ª LINHA -->
 	<div class="row">
-        <div class="form-group col-md-2">
-				<label for="situacao_reserva">Situação da reserva</label>
-				<input type="text" class="form-control" name="situacao_reserva" value="<?php echo $row['situacao_reserva'] ?>">
-			</div> 
 	    <div class="form-group col-md-2">
 				<label for="id_res">ID do Restaurante</label>
 				<input type="number" class="form-control" name="id_res" value="<?php echo $row['id_res'] ?>">
-			</div>
+		</div>
 		<div class="form-group col-md-2">
 				<label for="id_cli">ID do Cliente</label>
 				<input type="number" class="form-control" name="id_cli" value="<?php echo $row['id_cli'] ?>">
-			</div>
+		</div>
 	</div>
 	<hr/>
 

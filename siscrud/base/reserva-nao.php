@@ -11,20 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-  <header class="header-home row">
-
-    <div class="col-md-6">
-        <img src="../img/Keep It.png">
-    </div>
-
-    <nav class="nav-home col-md-6">
-        <input type="search" placeholder="Pesquisar">
-        <img src="../img/search.png" id="header-img">
-        <img src="../img/reserva.png" id="header-img">
-        <a href="dados.php"><img src="../img/perfil.png" id="header-img"></a>
-    </nav>
-  </header>
-
+    <?php
+        include "header.php";
+    ?>
     <main class="reserva">
         <h1 style="font-weight: 900; color: #005A09;">OoPss</h1>
         <h3 style="font-weight: bolder;">Não encontramos nenhuma reserva :(</h3>

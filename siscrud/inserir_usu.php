@@ -14,7 +14,12 @@
      $result = mysqli_query($con, $sql);
 
      if($result){
-          echo "Cliente incluído com sucesso.<br><hr>";
+          if($nivel == 1){
+               header('Location: \GitHub/tcc/siscrud/base/login.php');
+               mysqli_close($con);
+          }else{
+               header("Location: index.php?page=home");
+          }
      }else{
           echo "ERRO";
      }

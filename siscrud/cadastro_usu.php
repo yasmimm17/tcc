@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style3.css">
 </head>
 <body>
-    <header class="cad">
+    <header class="cad" style="padding: 2em">
         <nav>
             <img src="img/Keep It.png">
         </nav>
@@ -33,10 +33,9 @@
                         <img src="img/nome.png">
                     </div>
                     <div class="inputgroup">
-                        <select class="form-control" name="nivel" id="nivel" placeholder="Nível">
-                            <option checked value="1" >Cliente</option>
-                            <option disabled value="2">Adm Restaurante</option>
-                            <option disabled value="3">Adm Geral</option>
+                        <select class="form-control" name="nivel" id="nivel" placeholder="Nível" onclick="usu()">
+                            <option value="1" >Cliente</option>
+                            <option value="2">Quero cadastrar meu restaurante</option>
                         </select>
                         <img src="img/nivel.png">
                     </div>
@@ -62,7 +61,16 @@
 
     <!--bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
     <script src="../../js/script.js"></script>
+
+    <script>
+        function usu(){
+            if(nivel == "1"){
+                $nivel = 1;
+            }else(
+                $nivel = 2;
+            )
+        }
+    </script>
 </body>
 </html>

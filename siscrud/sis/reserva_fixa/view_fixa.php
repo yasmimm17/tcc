@@ -31,10 +31,6 @@
 			<p><?php echo $row['cel_contato'];?></p>
 		</div>
 		<div class="col-md-3">
-			<p><strong>Situação da reserva</strong></p>
-			<p><?php echo $row['situacao_reserva'];?></p>
-		</div>
-		<div class="col-md-3">
 			<p><strong>ID do restaurante</strong></p>
 			<p><?php echo $row['id_res'];?></p>
 		</div>

@@ -6,6 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
 #logo{
     width: 10em;
 }
@@ -17,84 +25,6 @@
 
 li{list-style: none;}
 .active{color: #005A09;cursor: default;text-decoration: underline;}
-
-body{
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    height: auto;
-    min-height: 100vh;
-    width: 100%;
-}
-
-header{
-    background-color: rgb(255, 255, 255);
-    height: auto;
-    padding: 20px 40px;
-}
-
-header nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-header nav ul {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-}
-
-header nav a{
-    margin: auto 20px auto 40px;
-    color: #000000;
-    text-decoration: none; 
-    transition: .2s;
-}
-
-header nav a:hover, header nav a button:hover{
-    color: #005A09;
-    text-decoration: underline;
-}
-
-header nav a button{
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-}
-
-dialog{
-    background-color: transparent;
-    border: none;
-    box-shadow: 0 0 0.5em;
-    border-radius: 0.5em;
-    width: auto;
-    font-weight: bold;
-    position: absolute;
-}
-
-dialog a{
-    padding-left: -3em;
-    margin-bottom: -0.1em;
-}
-
-dialog button{
-    margin-left: 1em;
-    background-color: transparent;
-    border: none;
-    font-weight: 900;
-    color: rgb(158, 37, 37);
-}
-
-#barra{
-    width: 30em;
-    border-radius: 5em;
-    border-color: #000000;
-    position: relative;
-    left: 23%;
-    margin-left: 10em;
-}
 
 .p-3 img{
     float: left;
@@ -174,7 +104,7 @@ main.cadastro input:focus {
     outline: none;
 }
 
-main.cadastro .inputgroup input, main.cadastro select {
+main.cadastro .inputgroup input, main.cadastro select{
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 5px 10px 5px 40px;
@@ -185,7 +115,7 @@ main.cadastro select{
     width: 15em;
 }
 
-main.cadastro .inputgroup {
+main.cadastro .inputgroup{
     position: relative;
 }
 
@@ -238,10 +168,6 @@ main.reserva{
     margin-top: 1em;
 }
 
-.info input{
-    border: none;
-}
-
 .info button{
     margin-top: 2em;
     border-radius: 3em;
@@ -252,6 +178,13 @@ main.reserva{
     font-weight: bold;
     width: 10em;
     align-items: center;
+}
+
+.info .inputgroup{
+    position: relative;
+    margin-bottom: 3em;
+    width: 15em;
+    float: left;
 }
 
 .text-content h1{
@@ -286,6 +219,15 @@ main.reserva{
     align-items: center;
 }
 
+.container-main button{
+    padding: 0 1em 0 1em;
+    font-size: large;
+    font-weight: bold;
+    background-color: transparent;
+    border-color: #005A09;
+    color: #005A09;
+}
+
 .text-content2{
     padding: 2em;
     border: solid rgb(167, 167, 167);
@@ -307,22 +249,6 @@ main.reserva{
     display: block;
 }
 
-input[type="search"]{
-    padding: 0.3em;
-    border: none;
-    border-radius: 2em;
-    background-color: #E0E0E0;
-}
-
-.header-home{
-    padding-bottom: 5em;
-}
-
-#header-img{
-    width: 1.5em;
-    margin-left: -2em;
-}
-
 .dados h3{
     padding-left: 2em;
     padding-top: 2em;
@@ -332,11 +258,10 @@ input[type="search"]{
     border-radius: 20px;
     background-color: #E0E0E0;
     padding: 5px 10px 5px 40px;
-    width: 100%;
-    
+    width: 100%; 
 }
+
 .inputgroup {
-    position: relative;
     margin-bottom: 1em;
 }
 
@@ -375,22 +300,3 @@ input[type="search"]{
     border: none;
 }
 
-.loupe-white{
-    display: none;
-}
-
-.search-box{
-    height: 50px;
-    border-radius: 40px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: aquamarine;
-}
-
-.search-text{
-    background: none;
-    border: 0;
-    outline: 0;
-}

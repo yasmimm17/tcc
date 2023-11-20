@@ -55,7 +55,6 @@
             <div class="col-md-6 apresentacao" >
                 <h1>Keep It</h1>
                 <h3>Bem-vindo ao nosso site de reservas de mesa em restaurantes, a solução moderna para tornar suas refeições memoráveis desde o primeiro clique!</h3>
-                <a href="../cadastro_usu.php"><button>Vamos Lá</button></a>
             </div>
 
             <div class="col-md-6">
@@ -71,6 +70,9 @@
 
             <div class="col-md-6">
                 <h1 style="font-size:55px">É dono de um negócio? Cadastre seu restaurante!</h1>
+                <div style="justify-content: center; display: flex">
+                    <a href="../cadastro_usu.php"><button>Vamos Lá</button></a>
+                </div>
             </div>
         </div>
     </div>
