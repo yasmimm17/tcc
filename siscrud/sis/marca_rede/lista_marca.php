@@ -31,14 +31,12 @@
 				echo "<thead><tr>";
 				echo "<td><strong>ID</strong></td>"; 
 				echo "<td><strong>Nome da Marca</strong></td>"; 
-				echo "<td><strong>Logo</strong></td>";
 				echo "<td class='actions d-flex justify-content-center'><strong>Ações</strong></td>"; 
 				echo "</tr></thead><tbody>";
 				while($info = mysqli_fetch_array($data)){ 
 					echo "<tr>";
 					echo "<td>".$info['id_marca']."</td>";
 					echo "<td>".$info['nome_marca']."</td>";
-					echo "<td>".$info['logo_marca']." </td>";
 					echo "<td class='actions btn-group btn-group-sm d-flex justify-content-center'>";
 					echo "<a class='btn btn-outline-success btn-xs' href=?page=view_marca&id_marca=".$info['id_marca']."> <i class='bx bxs-binoculars'></i> </a>";
 					echo "<a class='btn btn-outline-warning btn-xs' href=?page=fedit_marca&id_marca=".$info['id_marca']."> <i class='bx bxs-edit-alt'></i> </a>"; 

@@ -56,12 +56,9 @@
 
         <ul class="navbar-nav" style="margin-left: 80%;">
           <li class="nav-item" style="font-weight: bold; margin-top: 5%">
-            <?php echo'' .$nome. '';?>
+            <a href="base/dados.php"><?php echo'' .$nome. '';?></a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="base/dados.php"><img src="img/home-perfil.png" width="40" height="40"></a>
-          </li>
         </ul>
       </nav>
       <br>

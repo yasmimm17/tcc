@@ -18,10 +18,6 @@ include "base/testa_nivel.php";
 				<label for="nome_marca">Nome da Marca</label>
 				<input type="text" class="form-control" name="nome_marca" maxlength="60">
 			</div>
-			<div class="col-md-3">
-                <label for="logo_marca">Logo da Marca</label>
-				<input type="file" accept="image/*" name="logo_marca" class="form-control"/>
-            </div>
 		</div>
 		<hr />
 		<div id="actions" class="row">
@@ -32,35 +28,3 @@ include "base/testa_nivel.php";
 		</div>
 	</form> 
 </div>
-
-<script>
-	const inputFile = document.querySelector("#picture__input");
-const pictureImage = document.querySelector(".picture__image");
-const pictureImageTxt = "";
-pictureImage.innerHTML = pictureImageTxt;
-
-inputFile.addEventListener("change", function (e) {
-  const inputTarget = e.target;
-  const file = inputTarget.files[0];
-
-  if (file) {
-    const reader = new FileReader();
-
-    reader.addEventListener("load", function (e) {
-      const readerTarget = e.target;
-
-      const img = document.createElement("img");
-      img.src = readerTarget.result;
-      img.classList.add("picture__img");
-
-      pictureImage.innerHTML = "";
-      pictureImage.appendChild(img);
-    });
-
-    reader.readAsDataURL(file);
-  } else {
-    pictureImage.innerHTML = pictureImageTxt;
-  }
-});
-
-</script>

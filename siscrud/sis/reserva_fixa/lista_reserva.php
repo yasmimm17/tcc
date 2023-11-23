@@ -96,7 +96,7 @@ if($result){
         </div>
     </header>
     
-    <h1 style="margin-left: 0.5em">Suas Reservas</h1>
+    <h1>Suas Reservas</h1>
     <table border="1">
         <tr>
             <th>ID da Reserva</th>

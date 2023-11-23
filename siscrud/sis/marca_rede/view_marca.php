@@ -16,10 +16,6 @@
 			<p><strong>Nome da Marca</strong></p>
 			<p><?php echo $row['nome_marca'];?></p>
 		</div>
-		<div class="col-md-4">
-			<p><strong>Logo</strong></p>
-			<p><?php echo $row['logo_marca'];?></p>
-		</div>
 	</div>
 	<hr/>
 	<div id="actions" class="row">

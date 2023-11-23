@@ -22,7 +22,7 @@
         outline: 0;
         padding: 10px;
         border-radius: 40px;
-        left: 75%;
+        left: 70%;
     }
 
   main.dados button{
@@ -92,8 +92,9 @@
   }
 
   main.dados{
+    width: 50em;
     height: 25em;
-    box-shadow: 10px 5px 5px #393939;
+    box-shadow: 5px 5px 5px #393939;
     border-radius: 2em
   }
 

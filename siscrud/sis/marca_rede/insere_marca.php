@@ -1,27 +1,18 @@
-<?php
-include('conexao.php'); // Conexão com o banco de dados
+<?php 
+    if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
+    $nome_marca             = $_POST["nome_marca"];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome_marca = $_POST['nome_marca'];
+    $sql = "insert into marca_rede values ";
+    $sql .= "('0','$nome_marca');";
+    
+    $resultado = mysqli_query($con, $sql)or die(mysqli_error());
 
-    // Verifica se um arquivo de imagem foi enviado
-    if(isset($_FILES['logo_marca']) && $_FILES['logo_marca']['error'] === UPLOAD_ERR_OK) {
-        $logo_marca = file_get_contents($_FILES['logo_marca']['tmp_name']);
-
-        // Prepara e executa a consulta SQL para inserir a imagem no banco de dados
-        $stmt = $conn->prepare("INSERT INTO marca_rede (nome_marca, logo_marca) VALUES (?, ?)");
-        $stmt->bind_param("sb", $nome_marca, $logo_marca);
-        
-        if($stmt->execute()) {
-            header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1');
-        } else {
-            header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1') . $conn->error;
-        }
-        $stmt->close();
-    } else {
-        echo "Nenhuma imagem enviada ou ocorreu um erro no upload.";
+    if($resultado){
+        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_rede&msg=1');
+        mysqli_close($con);
+    }else{
+        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_rede&msg=4');
+        mysqli_close($con);
     }
-}
-
-$conn->close();
 ?>
+

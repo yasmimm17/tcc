@@ -37,6 +37,7 @@
   }
 
   main.dados{
+    width: 50em;
     height: 25em;
     box-shadow: 10px 5px 5px #393939;
     border-radius: 2em

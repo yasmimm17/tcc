@@ -23,7 +23,7 @@ input{
     outline: 0;
     padding: 10px;
     border-radius: 40px;
-    left: 75%;
+    left: 70%;
 }
 </style>
 

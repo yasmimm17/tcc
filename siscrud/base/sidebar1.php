@@ -17,12 +17,6 @@
         </a>
       </li>
       <li>
-        <a href="?page=lista_demand">
-          <i class='bx bx-clipboard'></i>
-          <span class="link_name">Reserva por demanda</span>
-        </a>
-      </li>
-      <li>
         <a href="?page=logout">
           <i class='bx bxs-exit'></i>
           <span class="link_name">Sair</span>

@@ -1,0 +1,11 @@
+#atenção a extensão GD no php.ini
+#atenção a versão do PHP e MPDF
+
+Busque mais detalhes na documentação do mpdf
+
+composer require mpdf/mpdf
+composer update mpdf/mpdf
+ou
+composer require mpdf/mpdf v8.1.2 -W
+ou
+composer require mpdf/mpdf v8.2.0 -W
