@@ -32,11 +32,9 @@ CREATE TABLE IF NOT EXISTS `inventario` (
   KEY `id_res` (`id_res`),
   CONSTRAINT `inventario_ibfk_1` FOREIGN KEY (`id_mesa`) REFERENCES `tipo_mesa` (`id_mesa`),
   CONSTRAINT `inventario_ibfk_2` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.inventario: ~1 rows (aproximadamente)
-INSERT INTO `inventario` (`id_invent`, `qtde`, `id_mesa`, `id_res`) VALUES
-	(1, 4, 1, 2);
+-- Copiando dados para a tabela keepit.inventario: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.localidade
 DROP TABLE IF EXISTS `localidade`;
@@ -48,9 +46,15 @@ CREATE TABLE IF NOT EXISTS `localidade` (
   PRIMARY KEY (`cep`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.localidade: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela keepit.localidade: ~7 rows (aproximadamente)
 INSERT INTO `localidade` (`cep`, `cidade`, `uf`, `ativo`) VALUES
-	('12345-678', 'Marechal Hermes', 'RJ', 1);
+	(' 21820-005', 'Rio de Janeiro', 'RJ', 1),
+	('12345-678', 'Marechal Hermes', 'RJ', 1),
+	('20720-010', 'Rio de Janeiro', 'RJ', 1),
+	('21810-200', 'Rio de Janeiro', '', 1),
+	('22630-010', 'Rio de Janeiro', 'RJ', 1),
+	('25025-420', 'Rio de Janeiro', 'RJ', 1),
+	('26580-250', 'Rio de Janeiro', 'RJ', 1);
 
 -- Copiando estrutura para tabela keepit.marca_rede
 DROP TABLE IF EXISTS `marca_rede`;
@@ -59,12 +63,16 @@ CREATE TABLE IF NOT EXISTS `marca_rede` (
   `nome_marca` varchar(45) NOT NULL,
   `logo_marca` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.marca_rede: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela keepit.marca_rede: ~5 rows (aproximadamente)
 INSERT INTO `marca_rede` (`id_marca`, `nome_marca`, `logo_marca`) VALUES
-	(5, 'Mamma Jamma', ''),
-	(9, 'Parmê', '');
+	(5, 'Paris 6', ''),
+	(19, 'Outback', ''),
+	(20, 'Parmê', ''),
+	(22, 'Nosso Lugar', ''),
+	(23, 'Chifa', ''),
+	(24, 'Mariah', '');
 
 -- Copiando estrutura para tabela keepit.reserva_fixa
 DROP TABLE IF EXISTS `reserva_fixa`;
@@ -81,27 +89,15 @@ CREATE TABLE IF NOT EXISTS `reserva_fixa` (
   KEY `id_cli` (`id_cli`),
   CONSTRAINT `reserva_fixa_ibfk_1` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`),
   CONSTRAINT `reserva_fixa_ibfk_2` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.reserva_fixa: ~0 rows (aproximadamente)
-
--- Copiando estrutura para tabela keepit.reserva_ondemand
-DROP TABLE IF EXISTS `reserva_ondemand`;
-CREATE TABLE IF NOT EXISTS `reserva_ondemand` (
-  `idreserva_ondemand` int(11) NOT NULL AUTO_INCREMENT,
-  `qtde_pessoas` int(11) NOT NULL,
-  `cel_contato` varchar(15) NOT NULL,
-  `sit_reserva_ond` char(1) NOT NULL,
-  `id_cli` int(11) NOT NULL,
-  `id_res` int(11) NOT NULL,
-  PRIMARY KEY (`idreserva_ondemand`),
-  KEY `id_cli` (`id_cli`),
-  KEY `id_res` (`id_res`),
-  CONSTRAINT `reserva_ondemand_ibfk_1` FOREIGN KEY (`id_cli`) REFERENCES `usuario` (`id_cli`),
-  CONSTRAINT `reserva_ondemand_ibfk_2` FOREIGN KEY (`id_res`) REFERENCES `restaurante` (`id_res`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Copiando dados para a tabela keepit.reserva_ondemand: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela keepit.reserva_fixa: ~4 rows (aproximadamente)
+INSERT INTO `reserva_fixa` (`id_reserva`, `horario`, `qtde_pessoas`, `obs`, `cel_contato`, `id_res`, `id_cli`) VALUES
+	(11, '2023-12-07 19:30:00', 7, '', '(21) 99999-9999', 2, 14),
+	(13, '2023-12-03 13:00:00', 10, '', '(21) 99876-5443', 8, 26),
+	(15, '2023-11-29 08:40:00', 5, '', '(21) 98765-4321', 6, 25),
+	(16, '2023-12-09 08:49:00', 2, '', '(11) 1111-1111', 8, 25),
+	(17, '2023-11-17 07:52:00', 25, 'junção de mesas', '(21) 99999-9999', 2, 25);
 
 -- Copiando estrutura para tabela keepit.restaurante
 DROP TABLE IF EXISTS `restaurante`;
@@ -119,11 +115,16 @@ CREATE TABLE IF NOT EXISTS `restaurante` (
   KEY `id_marca` (`id_marca`),
   CONSTRAINT `restaurante_ibfk_1` FOREIGN KEY (`cep`) REFERENCES `localidade` (`cep`),
   CONSTRAINT `restaurante_ibfk_2` FOREIGN KEY (`id_marca`) REFERENCES `marca_rede` (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.restaurante: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela keepit.restaurante: ~6 rows (aproximadamente)
 INSERT INTO `restaurante` (`id_res`, `nome_res`, `nr_res`, `comp_res`, `tipo_sede_res`, `cep`, `id_marca`, `ativo`) VALUES
-	(2, 'Outback Bangu Shopping', '321', 'Próximo à saída do shopping', 0, '12345-678', 5, 1);
+	(2, 'Outback Bangu Shopping', '3210', 'Próximo à saída do shopping', 0, '12345-678', 19, 1),
+	(3, 'Parmê Méier', '450', '', 0, '20720-010', 20, 1),
+	(4, 'Mariah Padre Miguel', '23', NULL, 1, '21810-200', 24, 1),
+	(6, 'Chifa Copacabana', '50', 'em frente ao shopping', 0, '25025-420', 23, 1),
+	(7, 'Paris 6 Barra', '2415', '', 0, '22630-010', 5, 1),
+	(8, 'Nosso Lugar Mesquita', '720', '', 1, '26580-250', 22, 1);
 
 -- Copiando estrutura para tabela keepit.tipo_mesa
 DROP TABLE IF EXISTS `tipo_mesa`;
@@ -131,11 +132,9 @@ CREATE TABLE IF NOT EXISTS `tipo_mesa` (
   `id_mesa` int(11) NOT NULL AUTO_INCREMENT,
   `lugares_mesa` int(11) NOT NULL,
   PRIMARY KEY (`id_mesa`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.tipo_mesa: ~1 rows (aproximadamente)
-INSERT INTO `tipo_mesa` (`id_mesa`, `lugares_mesa`) VALUES
-	(1, 10);
+-- Copiando dados para a tabela keepit.tipo_mesa: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela keepit.usuario
 DROP TABLE IF EXISTS `usuario`;
@@ -146,18 +145,22 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(100) NOT NULL,
   `nivel` int(1) DEFAULT NULL,
   `ativo` tinyint(1) DEFAULT NULL,
+  `foto` varchar(220) DEFAULT NULL,
   PRIMARY KEY (`id_cli`),
   KEY `nivel` (`nivel`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Copiando dados para a tabela keepit.usuario: ~6 rows (aproximadamente)
-INSERT INTO `usuario` (`id_cli`, `nome`, `email`, `senha`, `nivel`, `ativo`) VALUES
-	(12, 'Yasmim Almeida Barbosa', 'yas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 3, 1),
-	(14, 'Cláudio Rodrigues', 'claudio@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
-	(15, 'Raimunda da Lima', 'raimunda@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2, 1),
-	(16, 'Rayssa Lopes', 'ray@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
-	(17, 'Bruno Coelho', 'bruno@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1),
-	(18, 'Maria Frambach', 'maria@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1);
+-- Copiando dados para a tabela keepit.usuario: ~9 rows (aproximadamente)
+INSERT INTO `usuario` (`id_cli`, `nome`, `email`, `senha`, `nivel`, `ativo`, `foto`) VALUES
+	(12, 'Yasmim Almeida Barbosa', 'yas@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 3, 1, NULL),
+	(14, 'Claudinei Inácio Barbosa', 'barbosaclaudinei47@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, NULL),
+	(15, 'Raimunda da Lima', 'raimunda@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2, 1, NULL),
+	(18, 'Bryan Almeida Barbosa', 'bryan@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, NULL),
+	(21, 'Luiza Gomes', 'lulu@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, ''),
+	(22, 'Isabel Pereira', 'bebel@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2, 1, ''),
+	(25, 'Letícia Pereira', 'lele@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, ''),
+	(26, 'Eloisa Helena', 'elo@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, ''),
+	(27, 'Raphaela Lopes e Santos', 'rapa@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1, 1, '');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
