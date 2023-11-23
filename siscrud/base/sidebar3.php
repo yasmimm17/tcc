@@ -53,6 +53,12 @@
         </a>
       </li>
       <li>
+        <a href="projeto-pdf">
+          <i class='bx bx-book'></i>
+          <span class="link_name">Relatório</span>
+        </a>
+      </li>
+      <li>
         <a href="?page=logout2">
           <i class='bx bxs-exit'></i>
           <span class="link_name">Sair</span>

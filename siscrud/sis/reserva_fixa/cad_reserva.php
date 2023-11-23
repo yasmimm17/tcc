@@ -11,31 +11,42 @@
     }
 </style>
 <body>
+    <?php
+        if(!isset($_SESSION)) session_start();
+        //include "../../base/config.php";
+        $con = mysqli_connect('localhost', 'root', '', 'keepit');
+        $sql = "select * from restaurante;";
+        $rs = mysqli_query($con, $sql);
+        //var_dump($rs);exit;
+    ?>
+
     <div style="position: absolute; padding-left: 2em; padding-top: 1em">
         <h1 style="color: #005A09;">Preencha sua reserva</h1>
 
         <form action="../sis/reserva_fixa/inserir_fixa.php" method="post" class="row g-3" name='form' id="form">
-            <div class="col-md-2">
-                <label for="id_cli" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="id_cli" name="id_cli">
+            <input type="hidden" name="id_cli" value='<?php echo $_SESSION['UsuarioID'];?>'>
+            <div class="form-group col-md-3">
+				<label class="form-label" for="restaurante">Restaurante</label>
+                    <select class="form-control" name="id_res" id="restaurante">
+                        <option value='0'>Restaurantes</option>
+                        <?php while($dados = mysqli_fetch_array($rs)): ?>
+                            <option value="<?php echo $dados['id_res']; ?>"><?php echo $dados['nome_res']; ?></option>
+                        <?php endwhile; ?>
+                    </select>
             </div>
-            <div class="col-md-2">
-                <label for="id_res" class="form-label">Restaurante</label>
-                <input type="text" class="form-control" id="id_res" name="id_res">
-            </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label for="qtde_pessoas" class="form-label">Quantidade de pessoas</label>
                 <input type="number" min="1" class="form-control" id="qtde_pessoas" name="qtde_pessoas">
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label for="cel_contato" class="form-label">Telefone/Celular</label>
                 <input type="tel" class="form-control" id="cel_contato" name="cel_contato" onkeypress="mascara_tel(this)" onkeydown="return somente_numero(event)" maxlength="15" placeholder="+55 (xx) xxxxx-xxxx" >
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label for="horario" class="form-label">Horário da reserva</label>
                 <input type="datetime-local" class="form-control" id="horario" name="horario">
             </div>
-            <div class="col-5">
+            <div class="col-12">
                 <label for="obs" class="form-label">Observação</label>
                 <input type="text" class="form-control" id="obs" name="obs" placeholder="Ex: uma cadeira para bebês">
             </div>

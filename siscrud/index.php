@@ -54,7 +54,7 @@
             //Exibir   
       ?>
 
-        <ul class="navbar-nav" style="margin-left: 80%;">
+        <ul class="navbar-nav" style="margin-left: 90%;">
           <li class="nav-item" style="font-weight: bold; margin-top: 5%">
             <a href="base/dados.php"><?php echo'' .$nome. '';?></a>
           </li>

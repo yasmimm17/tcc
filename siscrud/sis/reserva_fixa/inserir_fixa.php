@@ -10,6 +10,7 @@
 
      $sql = "insert into reserva_fixa values ";
      $sql .= "('0','$horario', '$qtde_pessoas', '$obs', '$cel_contato', '$id_res', '$id_cli');";
+     //echo $sql;exit;
 
      echo $sql; 
 

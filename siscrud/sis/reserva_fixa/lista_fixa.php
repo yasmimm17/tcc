@@ -26,8 +26,9 @@
 
 				$pagina = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
 				$inicio = ($quantidade * $pagina) - $quantidade;
+				$sql = "SELECT * FROM reserva_fixa ri, usuario u, restaurante r WHERE ri.id_cli = u.id_cli	AND ri.id_res = r.id_res order by id_reserva asc limit $inicio, $quantidade;";
 
-				$data = mysqli_query($con, "select * from reserva_fixa order by id_reserva asc limit $inicio, $quantidade;") or die(mysqli_error("ERRO: ".$con));
+				$data = mysqli_query($con, $sql) or die(mysqli_error($con));
 				echo "<table class='table table-striped' cellspacing='0' cellpading='0'>";
 				echo "<thead><tr>";
 				echo "<td><strong>ID</strong></td>"; 
@@ -35,8 +36,8 @@
 				echo "<td><strong>Quantidade de pessoas</strong></td>"; 
 				echo "<td><strong>Observação</strong></td>";
 				echo "<td><strong>Celular para contato</strong></td>";
-                echo "<td><strong>ID do Restaurante</strong></td>";
-                echo "<td><strong>ID do Cliente</strong></td>";
+                echo "<td><strong>Restaurante</strong></td>";
+                echo "<td><strong>Cliente</strong></td>";
 				echo "<td class='actions justify-content-center'><strong>Ações</strong></td>"; 
 				echo "</tr></thead><tbody>";
 				while($info = mysqli_fetch_array($data)){ 
@@ -46,8 +47,8 @@
 					echo "<td>".$info['qtde_pessoas']."</td>";
 					echo "<td>".$info['obs']." </td>";
 					echo "<td>".$info['cel_contato']."</td>";
-                    echo "<td>".$info['id_res']."</td>";
-                    echo "<td>".$info['id_cli']."</td>";
+                    echo "<td>".$info['nome_res']."</td>";
+                    echo "<td>".$info['nome']."</td>";
 					echo "<td class='actions btn-group btn-group-sm d-flex justify-content-center'>";
 					echo "<a class='btn btn-outline-success btn-xs' href=?page=view_fixa&id_reserva=".$info['id_reserva']."> <i class='bx bxs-binoculars'></i> </a>";
 					echo "<a class='btn btn-outline-warning btn-xs' href=?page=fedit_fixa&id_reserva=".$info['id_reserva']."> <i class='bx bxs-edit-alt'></i> </a>"; 

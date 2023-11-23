@@ -27,7 +27,9 @@
 				$pagina = (isset($_GET['pagina'])) ? (int)$_GET['pagina'] : 1;
 				$inicio = ($quantidade * $pagina) - $quantidade;
 
-				$data = mysqli_query($con, "select * from restaurante order by id_res asc limit $inicio, $quantidade;") or die(mysqli_error("ERRO: ".$con));
+				$sql = "SELECT * from restaurante r, marca_rede m, localidade l WHERE r.id_marca = m.id_marca AND l.cep = r.cep order by id_res asc limit $inicio, $quantidade;";
+
+				$data = mysqli_query($con, $sql) or die(mysqli_error($con));
 				echo "<table class='table table-striped' cellspacing='0' cellpading='0'>";
 				echo "<thead><tr>";
 				echo "<td><strong>ID</strong></td>"; 
@@ -36,7 +38,7 @@
 				echo "<td><strong>Complemento</strong></td>";
 				echo "<td><strong>Sede</strong></td>";
                     echo "<td><strong>Cep</strong></td>";
-                    echo "<td><strong>ID da Marca</strong></td>";
+                    echo "<td><strong>Marca</strong></td>";
                     echo "<td><strong>Ativo</strong></td>";
 				echo "<td class='actions justify-content-center'><strong>Ações</strong></td>"; 
 				echo "</tr></thead><tbody>";
@@ -52,7 +54,7 @@
                         echo "<td>FILIAL</td>";
                     }
                     echo "<td>".$info['cep']." </td>";
-            		echo "<td>".$info['id_marca']." </td>";
+            		echo "<td>".$info['nome_marca']." </td>";
                     if($info['ativo'] == 1){
                         echo "<td>SIM</td>";
                     }else if($info['ativo'] == 0){

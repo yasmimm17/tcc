@@ -35,42 +35,34 @@
 	$html1 .= "
 		<div class='dados'>
 			<table class='fontedados' cellspacing='2' cellpadding='2' width='100%'>
-				<tr>
-					<td width='10%'><strong>ID</strong></td>
-					<td width='10%'><strong>CLIENTE</strong></td>
-					<td width='30%'><strong>RESERVA</strong></td>
-					<td width='20%'><strong>DIA</strong></td>
-					<td width='20%'><strong>HORÁRIO</strong></td>
-				</tr>
-	"; 
+			<thead><tr>
+			<td><strong>ID</strong></td> 
+			<td><strong>Nome</strong></td>
+			<td><strong>Email</strong></td>
+			<td><strong>Nível</strong></td>
+			<td><strong>Ativo</strong></td> 
+			</tr></thead>
+		</div>";
 
-	$cont = 1; 
-	while($cont <= 100){ 
-		if($cont % 2 == 0){ 
-			$html1 .= "
-				<tr style='background:#eee;'>
-					<td>".$cont."</td>
-					<td>Bruno Coelho</td>
-					<td> Outback Shopping Bangu </td>
-					<td> 10/12/2023 </td>
-					<td> ".date('H:i:s')." </td>
-				</tr>
-			";
-		}else{ 
-			$html1 .= "
-				<tr>
-					<td>".$cont."</td>
-					<td>Cláudio da Silva</td>
-					<td>Parmê Top Shopping</td>
-					<td> 27/10/2023 </td>
-					<td> ".date('H:i:s')." </td>
-				</tr>
-			";
-		} 
-		$cont++; 
-	} 
+	include "../base/config.php"; 
 
-	$html1 .= "</table></div><br>"; 
+	$sql = "select * from usuario order by id_cli";
+	$data = mysqli_query($con, $sql) or die(mysqli_error($con));
+
+	while($info = mysqli_fetch_array($data)){ 
+		$html1 .= "<tr>
+		<td>".$info['id_cli']."</td>
+		<td>".$info['nome']."</td>
+		<td>".$info['email']."</td>
+		<td>".$info['nivel']."</td>";
+
+		if($info['ativo'] == 1){
+			$html1 .= "<td> SIM </td>";
+		}else if($info['ativo'] == 0){
+			$html1 .= "<td>NÃO</td>";
+		}
+	}
+	$html1 .= "</tr></tbody></table>"; 
 
 	$htmlfooter = "
 		<hr>

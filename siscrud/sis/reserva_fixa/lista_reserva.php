@@ -121,7 +121,7 @@ if($result){
                 echo "<td>" . $row["cel_contato"] . "</td>";
                 echo "<td>" . $row["id_res"] . "</td>";
                 echo "<td>" . $row["id_cli"] . "</td>";
-                echo "<td><a href = 'fedit_reserva.php?id_reserva='>Editar </a><a href = 'excluir_reserva.php?id_reserva='> Excluir</a></td>";
+                echo "<td><a href = 'fedit_reserva.php?id_reserva=".$row['id_reserva']."'>Editar </a><a href = 'excluir_reserva.php?id_reserva=".$row['id_reserva']."'> Excluir</a></td>";
                 // Adicione outras colunas conforme necessário
                 echo "</tr>";
             }

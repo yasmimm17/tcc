@@ -35,7 +35,7 @@
     
     <div  class="container row" style="padding-top: 8em">
         <div class="col-2">
-            <img src="../img/outback 1.png" id="img" style="height: 7em; width: 7em">
+            <img src="../img/outback-icon.png" id="img" style="height: 7em; width: 7em">
         </div>
 
         <div class="col-3" style="margin-top: 2em;">

@@ -24,61 +24,71 @@
         }
 
         include "header.php";
+        include "config.php";
     ?>
     <main class="home">
         <h1 style="color: #005A09; font-weight: 900; left: 30px; margin-left: 2.2em; margin-bottom: 2em">Restaurantes disponíveis:</h1>
 
-        <div class="row home1">
-            <div class="col-md-4 ">
-                <div>
-                    <a href="outback.php"><img src="../img/outback.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Outback</p>
-                    <p>R. Fonseca, 240 - Bangu</p>
-                </div>
-            </div>
+        <?php
+            //$cont =0; 
+            $sql = "SELECT * FROM restaurante r, marca_rede m, localidade l WHERE r.id_marca = m.id_marca AND r.cep = l.cep";
+            //echo $sql;exit;
+			$data = mysqli_query($con, $sql) or die(mysqli_error($con));
+            echo "  <div class='row home1'>";
+            while($info = mysqli_fetch_array($data)){
+                echo "  <div class='col-md-4'>
+                                <div>
+                                    <a href='".$info["site"].".php'><img src='../img/logo/".$info["logo_marca"]."'></a>
+                                    <p style='font-weight: bold; font-size: 1.5em'>".$info["nome_res"]."</p>
+                                    <p>".$info["logradouro"]."</p>
+                                </div>
+                            </div>";
+            //echo "</div>";
+                //     <div class="col-md-4">
+                //         <div>
+                //             <a href="nossolugar.php"><img src="../img/nossolugar.png"></a>
+                //             <p style="font-weight: bold; font-size: 1.5em">Nosso Lugar</p>
+                //             <p>R. Ambrósio, 363 - Mesquita</p>
+                //         </div>
+                //     </div>
 
-            <div class="col-md-4">
-                <div>
-                    <a href="nossolugar.php"><img src="../img/nossolugar.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Nosso Lugar</p>
-                    <p>R. Ambrósio, 363 - Mesquita</p>
-                </div>
-            </div>
+                //     <div class="col-md-4">
+                //         <div>
+                //             <a href="paris6.php"><img src="../img/paris6.png"></a>
+                //             <p style="font-weight: bold; font-size: 1.5em">Paris 6</p>
+                //             <p>Av. Lúcio Costa, 3150 - Barra da Tijuca</p>
+                //         </div>
+                //     </div>
+                // </div>
 
-            <div class="col-md-4">
-                <div>
-                    <a href="paris6.php"><img src="../img/paris6.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Paris 6</p>
-                    <p>Av. Lúcio Costa, 3150 - Barra da Tijuca</p>
-                </div>
-            </div>
-        </div>
+                // <div class="row home2">
+                //     <div class="col-md-4">
+                //         <div>
+                //             <a href="chifa.php"><img src="../img/chifa.png"></a>
+                //             <p style="font-weight: bold; font-size: 1.5em">Chifa</p>
+                //             <p>R. Rodolfo Dantas, 26 - Copacabana</p>
+                //         </div>
+                //     </div>
 
-        <div class="row home2">
-            <div class="col-md-4">
-                <div>
-                    <a href="chifa.php"><img src="../img/chifa.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Chifa</p>
-                    <p>R. Rodolfo Dantas, 26 - Copacabana</p>
-                </div>
-            </div>
+                //     <div class="col-md-4">
+                //         <div>
+                //             <a href="mariah.php"><img src="../img/mariah.png"></a>
+                //             <p style="font-weight: bold; font-size: 1.5em">Mariah</p>
+                //             <p>R. Tupiaçu, 193 - Padre Miguel</p>
+                //         </div>
+                //     </div>
 
-            <div class="col-md-4">
-                <div>
-                    <a href="mariah.php"><img src="../img/mariah.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Mariah</p>
-                    <p>R. Tupiaçu, 193 - Padre Miguel</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div>
-                    <a href="parme.php"><img src="../img/parme.png"></a>
-                    <p style="font-weight: bold; font-size: 1.5em">Parmê</p>
-                    <p>R. Dias da Cruz, 291 - Méier</p>
-                </div>
-            </div>
-        </div>
+                //     <div class="col-md-4">
+                //         <div>
+                //             <a href="parme.php"><img src="../img/parme.png"></a>
+                //             <p style="font-weight: bold; font-size: 1.5em">Parmê</p>
+                //             <p>R. Dias da Cruz, 291 - Méier</p>
+                //         </div>
+        
+                //         </div>
+                // </div>
+            } 
+        ?>    
     </main>
 
     <!--bootstrap script-->

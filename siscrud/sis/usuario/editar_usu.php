@@ -127,6 +127,7 @@
       $row = mysqli_fetch_assoc($result);
 
       //Exemplo de como apresentar os valores nos inputs
+      $id_cli = $row['id_cli'];
       $nome = $row['nome'];
       $email = $row['email'];
       $senha = $row['senha'];
@@ -180,6 +181,7 @@
             <form action="updt_usu.php" method="post">
                 <div class="row">
                     <div class="col-md-4">
+                        <input type="hidden" name="id_cli" value='<?php echo $row["id_cli"]; ?>'>
                         <input type="email" name="email" id="email" value='<?php echo $row["email"]; ?>'>
                     </div>
                     <div class="col-md-4">
