@@ -31,12 +31,12 @@ input{
 
     <div class="row">
         <div class="col-md-8">
-          <img src="../img/Keep It.png">
+          <a href="inicio.php"><img src="../img/Keep It.png"></a>
         </div>
 
         <nav class="nav-home col-md-4">
             <input type="search" class="search-text" placeholder="Pesquisar">
-            <a class href="reserva-nao.php" style="position: absolute; left: 90%;"><img src="../img/reserva.png" id="header-img"></a>
+            <a class href="../sis/reserva_fixa/lista_reserva.php" style="position: absolute; left: 90%;"><img src="../img/reserva.png" id="header-img"></a>
             <a href="dados.php" style="position: absolute; left: 95%;"><img src="../img/perfil.png" id="header-img"></a>
         </nav>
     </div>

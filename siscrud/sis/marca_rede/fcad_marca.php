@@ -19,19 +19,14 @@ include "base/testa_nivel.php";
 				<input type="text" class="form-control" name="nome_marca" maxlength="60">
 			</div>
 			<div class="col-md-3">
-                <label for="logo_marca">Logo da Marca
-					<label for="picture__input" class="picture" tabIndex="0">
-						<span class="picture__image"></span>
-					</label>
-				</label>
-
-				<input type="file" accept="image/*" name="logo_marca" id="picture__input"/>
+                <label for="logo_marca">Logo da Marca</label>
+				<input type="file" accept="image/*" name="logo_marca" class="form-control"/>
             </div>
 		</div>
 		<hr />
 		<div id="actions" class="row">
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-success">Salvar</button>
+				<button type="submit" class="btn btn-success" name="salvarfoto">Salvar</button>
 				<a href="?page=lista_marca" class="btn btn-danger">Cancelar</a>
 			</div>
 		</div>

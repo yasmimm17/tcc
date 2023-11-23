@@ -1,3 +1,48 @@
+<style>
+  main.dados button{
+    margin-top: 2em;
+    border-radius: 3em;
+    border: none;
+    padding: 0.5em;
+    color: white;
+    background-color: rgb(153, 24, 24);
+    font-weight: bold;
+    width: 10em;
+    align-items: center;
+  }
+
+  main.dados button:hover{
+    margin-top: 2em;
+    border-radius: 3em;
+    border: none;
+    padding: 0.5em;
+    color: white;
+    background-color: #831515;
+    font-weight: bold;
+    width: 10em;
+    align-items: center;
+  }
+
+  main.dados label{
+    background: #E0E0E0;
+    padding: 0.5em;
+    border-radius: 3em;
+    margin-bottom: 1em;
+    width: 15em
+  }
+
+  main.dados label img{
+    width: 20px;
+    height: auto;
+  }
+
+  main.dados{
+    height: 25em;
+    box-shadow: 10px 5px 5px #393939;
+    border-radius: 2em
+  }
+</style>
+
 <?php
     include "config.php";
     if(!isset($_SESSION)) session_start();
@@ -25,6 +70,7 @@
       $email = $row['email'];
       $senha = $row['senha'];
       $nivel = $row['nivel'];
+      $ativo = $row['ativo'];
 
       //Exibir
     
@@ -47,51 +93,48 @@
       include "header.php";
     ?>
 
-    <div class="conteudo col-md-6">
-      <main class="dados">
+      <main class="dados col-md-6" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">
           <div class="row">
             <div class="col-md-4">
               <img id="user" src="../img/home-perfil.png">
             </div>
             <div class="col-md-8">
-              <h3 style="font-weight: bold;">Olá, <?php echo'' .$nome. '';?>!<img src="../img/editar.png"></h3>
+              <h3 style="font-weight: bold;">Olá, <?php echo'' .$nome. '';?>!<a href="../sis/usuario/editar_usu.php"><img src="../img/editar.png"></a></h3>
             </div>
           </div>
-          <div class="info">
-              <div class="row">
-                  <div class="col-md-6">
-                    <div class="inputgroup">
-                      <input type="text" maxlength="60" name="nome" id="nome" <?php echo'value="' .$nome. '"';?>>
-                      <img src="../img/perfil-verde.png">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="inputgroup">
-                      <input type="text" maxlength="60" name="senha" id="senha" <?php echo'value="' .$senha. '"';?>>
-                      <img src="../img/senha-verde.png">
-                    </div>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="inputgroup">
-                    <input type="text" maxlength="60" name="email" id="email" <?php echo'value="' .$email. '"';?>>
-                    <img src="../img/email-verde.png">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="inputgroup">
-                    <input type="text" name="nivel" id="nivel" <?php echo'value="' .$nivel. '"';?>>
-                    <img src="../img/nivel-verde.png">
-                  </div>
-                </div>
-              </div>
-              <div class="row" style="width: 20em; text-align: center;">
-                <div class="col-md-7"><a href="land.php"><button>Sair</button></a></div>
-              </div>
+          <br>
+
+          <div class="row">
+            <div class="col-md-4">
+                <label for="email" name="email" id="email"><img src="../img/email-verde.png"><?php echo"$email";?></label>
+            </div>
+            <div class="col-md-4">
+                <label for="nivel" name="nivel" id="nivel"><img src="../img/nivel-verde.png"><?php
+                    if($nivel == 1){
+                      echo "Cliente";
+                    }elseif( $nivel == 2){
+                      echo "Adm de restaurante";
+                    }else{
+                      echo "Adm Geral";
+                    }
+                    ?>
+                </label>
+            </div>
+            <div class="col-md-4" style="display: flex; justify-content: center;">
+                <label for="ativo" name="ativo" id="ativo"><img src="../img/check-verde.png"><?php 
+                    if($ativo == 1){
+                      echo "Ativo: SIM";
+                    }else{
+                      echo "Ativo: NÃo";
+                    }
+                    ?>
+                </label>
+            </div>
+          </div>
+          <div class="row">  
+              <a href="../../siscrud/base/logout.php"><button style="position: absolute; left: 50%; transform: translate(-50%, -50%)">Sair</button></a>
           </div>
       </main>
-    </div>
 
     <!--bootstrap script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

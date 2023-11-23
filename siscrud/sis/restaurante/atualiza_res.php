@@ -15,7 +15,7 @@
      $result = mysqli_query($con, $sql);
 
      if($resultado){
-          header('Location: \GitHub/tcc/siscrud/index.php?page=lista_res&msg=2');
+          header('Location: \GitHub/tcc/siscrud/index.php?page=lista_res&msg=3');
          mysqli_close($con);
      }else{
           header('Location: \GitHub/tcc/siscrud/index.php?page=lista_res&msg=5');

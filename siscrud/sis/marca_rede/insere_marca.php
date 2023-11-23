@@ -1,63 +1,27 @@
 <?php
-    if(!isset($_POST["matricula"])) header("Location: \GitHub/tcc/siscrud/index.php?page=home&msg=1");
+include('conexao.php'); // Conexão com o banco de dados
 
-    $nome_marca        = $_POST["nome_marca"];
-    $logo_marca       = !empty($_FILES['logo_marca']['name']) ? $_FILES['logo_marca']['name'] : "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome_marca = $_POST['nome_marca'];
 
-    if(!empty($logo_marca)){
-        $caminho = "imagens/uploads/";
-        $logo_marca = uploadImage($caminho);
-    }
+    // Verifica se um arquivo de imagem foi enviado
+    if(isset($_FILES['logo_marca']) && $_FILES['logo_marca']['error'] === UPLOAD_ERR_OK) {
+        $logo_marca = file_get_contents($_FILES['logo_marca']['tmp_name']);
 
-    $sql = "insert into marca_rede values ";
-    $sql .= "('0','$nome_marca','$logo_marca');";
-
-    $resultado = mysqli_query($con, $sql)or die(mysqli_error());
-
-    if($resultado){
-        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1');
-        mysqli_close($con);
-    }else{
-        header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=4');
-        mysqli_close($con);
-    }
-
-    function uploadImage($caminho){
-        if(!empty($_FILES['logo_marca']['name'])) {
-            $nomeArquivo = $_FILES['logo_marca']['name'];
-            $tipo = $_FILES['logo_marca']['type'];
-            $nomeTemporario = $_FILES['logo_marca']['tmp_name'];
-            $tamanho = $_FILES['logo_marca']['size'];
-            $erros = array();
-
-            $tamanhoMaximo = 1024 * 1024 * 5; //5MB
-            if($tamanho > $tamanhoMaximo){
-                $erros[] = "Seu arquivo excede o tamanho máximo<br>";
-            }
-
-            $arquivosPermitidos = ["png", "jpg", "jpeg"];
-            $extensao = pathinfo($nomeArquivo, PATHINFO_EXTENSION);
-            if(!in_array($extensao, $arquivosPermitidos)){
-                $erros[] = "Arquivo não permitido<br>";
-            }
-
-            $typesPermitidos = ["image/png", "image/jpg", "image/jpeg"];
-            if(!in_array($tipo, $typesPermitidos)){
-                $erros[] = "Tipo de arquivo não permitido<br>";
-            }
-
-            if (!empty($erros)){
-                foreach ($erros as $erro){
-                    echo $erro;
-                }
-            }else{
-                $novoNome = $nomeArquivo;
-                if(move_uploaded_file($nomeTemporario, $caminho.$novoNome)){
-                    echo "Upload feito com sucesso";
-                }else{
-                    echo "Erro";
-                }
-            }
+        // Prepara e executa a consulta SQL para inserir a imagem no banco de dados
+        $stmt = $conn->prepare("INSERT INTO marca_rede (nome_marca, logo_marca) VALUES (?, ?)");
+        $stmt->bind_param("sb", $nome_marca, $logo_marca);
+        
+        if($stmt->execute()) {
+            header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1');
+        } else {
+            header('Location: \GitHub/tcc/siscrud/index.php?page=lista_marca&msg=1') . $conn->error;
         }
+        $stmt->close();
+    } else {
+        echo "Nenhuma imagem enviada ou ocorreu um erro no upload.";
     }
+}
+
+$conn->close();
 ?>

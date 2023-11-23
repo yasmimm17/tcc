@@ -30,7 +30,13 @@
 		</div>
 		<div class="form-group col-md-2">
 			<label for="tipo_sede_res">Sede</label><br>
-			<?php
+				<label for="tipo_sede_res" class="radio-inline">
+					<input type="radio" name="optativo">Própria
+				</label>
+				<label for="tipo_sede_res" class="radio-inline">
+					<input type="radio" name="optativo">Filial
+				</label>
+				<?php
 				if($row["tipo_sede_res"]==1){
 					echo "<label>PRÓPRIA</label>";
 				}else if($row["tipo_sede_res"]==0){

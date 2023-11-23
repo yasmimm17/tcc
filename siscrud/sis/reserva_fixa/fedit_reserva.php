@@ -1,20 +1,4 @@
-<link rel="stylesheet" href="../../css/style3.css">
-<!--bootstrap css-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<style>
-    #reset{
-            background-color: rgb(115, 184, 115);
-        }
-
-    #button{
-        background-color: rgb(10, 112, 10);
-    }
-</style>
-<body>
-    <div style="position: absolute; padding-left: 2em; padding-top: 1em">
-        <h1 style="color: #005A09;">Preencha sua reserva</h1>
-
-        <form action="../sis/reserva_fixa/inserir_fixa.php" method="post" class="row g-3" name='form' id="form">
+<form action="updt_reserva.php" method="post" class="row g-3" name='form' id="form">
             <div class="col-md-2">
                 <label for="id_cli" class="form-label">Nome Completo</label>
                 <input type="text" class="form-control" id="id_cli" name="id_cli">
@@ -41,26 +25,6 @@
             </div>
             <div class="col-12">
                 <button type="reset" class="btn" id="reset">Cancelar</button>
-                <button type="submit" class="btn" id="button">Reservar</button>
+                <button type="submit" class="btn" id="button">Atualizar</button>
             </div>
-        </form>
-    </div>
-
-    <script>
-        function mascara_tel(obj) {
-            if(obj.value.length == 0) {
-                obj.value += "("
-            }
-            if(obj.value.length == 3) {
-                obj.value += ")"
-            }
-            if(obj.value.length == 4) {
-                obj.value += " "
-            }
-            if(obj.value.length == 10) {
-                obj.value += "-"
-            }
-        }
-    </script>
-
-</body>
+</form>

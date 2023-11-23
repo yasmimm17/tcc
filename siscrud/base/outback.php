@@ -12,7 +12,7 @@
         }
 
         header img{
-            height: 15em;
+            height: 20em;
             width: 100%
         }
 
@@ -33,7 +33,7 @@
         <img src="../img/headeroutback1.png">
     </header>
     
-    <div  class="container row" style="padding-top: 2em">
+    <div  class="container row" style="padding-top: 8em">
         <div class="col-2">
             <img src="../img/outback 1.png" id="img" style="height: 7em; width: 7em">
         </div>

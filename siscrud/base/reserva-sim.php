@@ -14,12 +14,23 @@
 </head>
 <body>
     <?php
+        include "config.php";
+        if(!isset($_SESSION)) session_start();
+        //Verfica se o id do usuário está definido na sessão
+        if(isset($_SESSION["UsuarioID"])) {
+            $usuario_id = $_SESSION["UsuarioID"];
+        } else{
+            //Redireciona o usuário para o login se não estiver logado
+            header("location: login.php");
+            exit;
+        }
+
         include "header.php";
     ?>
     <main class="reserva">
         <h1 style="font-weight: 900; color: #005A09;">Yaay!</h1>
         <h3 style="font-weight: bolder;">Sua reserva foi confirmada ;)</h3>
-        <h3 style="color: #005A09; font-weight: bolder;">Clique <a href="#" style="color: #005A09;">aqui</a> para vê-la</h3>
+        <h3 style="color: #005A09; font-weight: bolder;">Clique <a href="../sis/reserva_fixa/lista_reserva.php" style="color: #005A09;">aqui</a> para vê-la</h3>
     </main>
 
     <script src="js/script.js"></script>
