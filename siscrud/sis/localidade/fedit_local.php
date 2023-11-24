@@ -30,6 +30,11 @@
 			<input type="text" class="form-control" name="uf" max-length="2" value="<?php echo $row["uf"]; ?>">
 		</div>
 
+		<div class="form-group col-md-1">
+			<label for="logradouro">Logradouro</label>
+			<input type="text" class="form-control" name="logradouro" value="<?php echo $row["logradouro"]; ?>">
+		</div>
+
         <div class="form-group col-md-2">
 			<label for="ativo">Ativo</label><br>
 			<?php

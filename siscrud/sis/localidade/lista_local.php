@@ -32,6 +32,7 @@ include "base/testa_nivel.php";
 					echo "<td><strong>Cep</strong></td>"; 
 					echo "<td><strong>Cidade</strong></td>";
 					echo "<td><strong>UF</strong></td>";
+					echo "<td><strong>Logradouro</strong></td>";
 					echo "<td><strong>Ativo</strong></td>";
 					echo "<td class='actions'><strong>Ações</strong></td>"; 
 					echo "</tr></thead><tbody>";
@@ -41,6 +42,7 @@ include "base/testa_nivel.php";
 						echo "<td>".$info['cep']."</td>";
 						echo "<td>".$info['cidade']."</td>";
 						echo "<td>".$info['uf']."</td>";
+						echo "<td>".$info['logradouro']."</td>";
 						if($info['ativo'] == 1){
 							echo "<td>SIM</td>";
 						}else if($info['ativo'] == 0){

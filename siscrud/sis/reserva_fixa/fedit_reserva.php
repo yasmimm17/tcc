@@ -5,9 +5,8 @@
         padding: 2em;
         width:75em;
         position: absolute;
-        display: inline-block;
-        top: 40%;
-        left: 15%
+        top: 20%;
+        left: 5%
     }
 
 </style>

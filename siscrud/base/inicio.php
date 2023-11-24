@@ -24,7 +24,7 @@
         }
 
         include "header.php";
-        include "config.php";
+    
     ?>
     <main class="home">
         <h1 style="color: #005A09; font-weight: 900; left: 30px; margin-left: 2.2em; margin-bottom: 2em">Restaurantes disponíveis:</h1>

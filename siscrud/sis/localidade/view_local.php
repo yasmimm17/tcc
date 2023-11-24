@@ -28,6 +28,11 @@
 			<p><?php echo $row['uf']; ?></p>
 		</div>
 
+		<div class="col-md-4">
+			<p><strong>Logradouro</strong></p>
+			<p><?php echo $row['logradouro']; ?></p>
+		</div>
+
         <div class="col-md-2">
 			<p><strong>Ativo</strong></p>
 			<p><?php
